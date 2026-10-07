@@ -16,7 +16,7 @@ class Document(HTMLParser):
         self.feed(text)
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
-        if tag == 'div' and 'prose' in attrs.get('class','').split(): self.in_prose += 1
+        if tag == 'div' and (self.in_prose or 'prose' in attrs.get('class','').split()): self.in_prose += 1
         if 'id' in attrs: self.ids.add(attrs['id'])
         if tag == 'html': self.lang=attrs.get('lang')
         if tag == 'h1': self.h1 += 1
@@ -109,4 +109,5 @@ if (output/'files/CV.pdf').read_bytes() != (root/'static/files/CV.pdf').read_byt
 if not (output/'.nojekyll').exists(): errors.append('.nojekyll missing')
 if errors:
     print('\n'.join(errors)); raise SystemExit(1)
-print(f'PASS: {len(documents)} HTML files; {count} local/link references; 22 content routes; reciprocal language switching; {len(en)} bilingual UI keys; 10 research result charts; CV and .nojekyll.')
+panel_views=sum(len(project['panels']) for project in json.loads((root/'data/research_charts.json').read_text(encoding='utf-8')).values())*2
+print(f'PASS: {len(documents)} HTML files; {count} local/link references; 22 content routes; reciprocal language switching; {len(en)} bilingual UI keys; {panel_views} bilingual chart panels; CV and .nojekyll.')

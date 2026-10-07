@@ -207,7 +207,7 @@
     "other": "These summaries are based on my CV. Research in progress, completed analyses, and project experience are identified on each page; no publication or code release is implied."
   },
   "resultsEyebrow": {"other":"PROJECT RESULTS"},
-  "resultsHeading": {"other":"Results, at a glance."},
+  "resultsHeading": {"other":"Data & results in figures."},
   "absoluteThreshold": {"other":"Absolute r threshold"},
   "projectSource": {"other":"Project summary based on the supplied research and course materials; methods, sample sizes, and limitations are described at the scope reported in each source."},
   "galleryIntro": {

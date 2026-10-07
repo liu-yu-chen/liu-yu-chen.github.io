@@ -29,7 +29,7 @@
 4. 在 **Actions** 找到 `Build and deploy personal website`。如没有自动运行，点击 **Run workflow**。
 5. 工作流会使用本地已验证的 Hugo 版本构建两种语言、检查输出，再发布到 Pages。以后更新 Markdown 并上传，网站就会重新构建。
 
-工作流遵循 [Hugo 官方 GitHub Pages 部署文档](https://gohugo.io/host-and-deploy/host-on-github-pages/) 和 [GitHub 自定义 Pages 工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。工作流会自动使用仓库提供的实际部署地址；当前未上传或在 GitHub 上运行它。
+工作流遵循 [Hugo 官方 GitHub Pages 部署文档](https://gohugo.io/host-and-deploy/host-on-github-pages/) 和 [GitHub 自定义 Pages 工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。工作流自动使用仓库提供的实际部署地址；最近发布状态请查看仓库 Actions。
 
 两种上传方式**选择一种即可**。源码方式不要把 `public/` 上传到仓库。
 
@@ -48,6 +48,8 @@
 | 导航、按钮和通用文字 | `i18n/en.json` | `i18n/zh.json` |
 
 研究分享现有五个双语项目：生活方式与抑郁症状网络、基于主体建模文献分析、胃癌与GIST基因筛选、宫颈癌转录组与生存分析，以及厦门新能源汽车市场调研。图表按所提供材料中的数值绘制；页面同时说明相关样本口径、方法和局限。尤其对自陈调查的数据质量、报告中未达到显著性的结果和样本数未对齐的问题作了标注。项目报告与研究中的探索结果不应理解为临床验证或因果结论。
+
+每个项目详情页包括数据来源表、分析流程、方法、结果及解释与局限，并提供页面内跳转目录。共 21 个图表面板，每种语言各一版：包括偏相关与敏感性对照、主题分布、差异表达计数、模块交集、Cox 风险比及置信区间、词频和 LDA 主题卡片等。图表数据与流程文字在 `data/research_charts.json`，渲染位于 `layouts/partials/research-chart.html`；Markdown 中的 `{{< research-results >}}` 将图表放在结果部分。计算得到的补充值均注明来源与口径。
 
 - 首页两张大图与文案：`data/hero.json`。
 - 四个社交链接：`data/social.json`。

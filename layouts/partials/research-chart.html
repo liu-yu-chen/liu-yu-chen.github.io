@@ -14,7 +14,7 @@
           <div class="diverging-chart" aria-label="{{ index .title site.Language.Lang }}">
             <div class="correlation-rows">
               {{ range .rows }}
-                {{ $width := math.Abs .value | math.Div $panel.max | math.Mul 47 }}
+                {{ $width := mul (div (math.Abs .value) $panel.max) 50 }}
                 <div class="correlation-row"><span class="correlation-label">{{ index .label site.Language.Lang }}</span><span class="correlation-track"><span class="correlation-zero"></span><span class="correlation-bar {{ if lt .value 0 }}negative{{ else }}positive{{ end }}" style="{{ if lt .value 0 }}left:calc(50% - {{ printf "%.2f" $width }}%){{ else }}left:50%{{ end }};width:{{ printf "%.2f" $width }}%"></span></span><span class="correlation-value">{{ .display }}</span></div>
               {{ end }}
             </div>
@@ -37,8 +37,8 @@
           <p class="result-note">{{ index .note site.Language.Lang }}</p>
         {{ else if eq .type "stacked" }}
           <div class="stacked-chart" aria-label="{{ index .title site.Language.Lang }}">
-            <div class="stacked-track">{{ range .segments }}{{ $seg := . }}<span class="stacked-segment {{ if eq $seg.percent 50.0 }}major{{ end }}" style="width:{{ $seg.percent }}%"><b>{{ $seg.display }}</b></span>{{ end }}</div>
-            <div class="stacked-legend">{{ range .segments }}<span><i class="legend-swatch {{ if eq .percent 50.0 }}major{{ else if eq .percent 59.6 }}major{{ else }}minor{{ end }}"></i><span>{{ index .label site.Language.Lang }} <b>{{ .value }}</b></span></span>{{ end }}</div>
+            <div class="stacked-track">{{ range .segments }}<span class="stacked-segment color-{{ .color }}" style="width:{{ .percent }}%"><b>{{ .display }}</b></span>{{ end }}</div>
+            <div class="stacked-legend">{{ range .segments }}<span><i class="legend-swatch color-{{ .color }}"></i><span>{{ index .label site.Language.Lang }} <b>{{ .value }}</b></span></span>{{ end }}</div>
             <p class="stacked-total">n = {{ .total }}</p>
           </div>
           <p class="result-note">{{ index .note site.Language.Lang }}</p>
@@ -49,6 +49,25 @@
           <div class="cohort-grid">{{ range .cards }}<div class="cohort-card"><b>{{ .value }}</b><span>{{ index .label site.Language.Lang }}</span><small>{{ index .detail site.Language.Lang }}</small></div>{{ end }}</div>
         {{ else if eq .type "bars" }}
           <div class="bar-chart" aria-label="{{ index .title site.Language.Lang }}">{{ range .rows }}{{ $width := math.Div .value $panel.max | math.Mul 100 }}<div class="bar-row"><span>{{ index .label site.Language.Lang }}</span><span class="bar-track"><i style="width:{{ printf "%.2f" $width }}%"></i></span><b>{{ .display }}</b></div>{{ end }}</div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "grouped" }}
+          <div class="chart-legend">{{ range $i, $label := .series }}<span><i class="legend-swatch series-{{ $i }}"></i>{{ index $label site.Language.Lang }}</span>{{ end }}</div>
+          <div class="grouped-chart">{{ range .rows }}<div class="grouped-category"><h4>{{ index .label site.Language.Lang }}</h4>{{ range $i, $value := .values }}<div class="grouped-row"><span class="bar-track"><i class="series-{{ $i }}" style="width:{{ printf "%.2f" (mul (div (float $value) $panel.max) 100) }}%"></i></span><b>{{ $value }}</b></div>{{ end }}</div>{{ end }}</div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "comparison" }}
+          <div class="chart-legend">{{ range $i, $label := .columns }}<span><i class="legend-swatch series-{{ $i }}"></i>{{ index $label site.Language.Lang }}</span>{{ end }}</div>
+          <div class="estimate-chart">{{ range .rows }}{{ $a := index .values 0 }}{{ $b := index .values 1 }}{{ $pa := mul (div (sub $a $panel.min) (sub $panel.max $panel.min)) 100 }}{{ $pb := mul (div (sub $b $panel.min) (sub $panel.max $panel.min)) 100 }}
+            <div class="estimate-row"><span>{{ index .label site.Language.Lang }}</span><div class="estimate-track"><i class="estimate-zero"></i><i class="estimate-link" style="left:{{ printf "%.2f" (math.Min $pa $pb) }}%;width:{{ printf "%.2f" (math.Abs (sub $pa $pb)) }}%"></i><i class="estimate-dot series-0" style="left:{{ printf "%.2f" $pa }}%"></i><i class="estimate-dot series-1" style="left:{{ printf "%.2f" $pb }}%"></i></div><b>{{ printf "%.3f / %.3f" $a $b }}</b></div>
+          {{ end }}<div class="estimate-axis"><span>−0.14</span><span>0</span><span>+0.14</span></div></div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "overlap" }}
+          <svg class="overlap-chart" viewBox="0 0 400 190" role="img" aria-label="{{ index .title site.Language.Lang }}"><circle cx="150" cy="95" r="84" fill="#72907b" fill-opacity=".30" stroke="#72907b"/><circle cx="250" cy="95" r="84" fill="#bb8368" fill-opacity=".25" stroke="#bb8368"/><text x="113" y="89">{{ index .counts 0 }}</text><text x="200" y="89">{{ index .counts 1 }}</text><text x="287" y="89">{{ index .counts 2 }}</text><text class="overlap-label" x="113" y="111">{{ index .left site.Language.Lang }}</text><text class="overlap-label" x="200" y="111">{{ index .shared site.Language.Lang }}</text><text class="overlap-label" x="287" y="111">{{ index .right site.Language.Lang }}</text></svg>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "forest" }}
+          <div class="forest-chart">{{ range .rows }}<div class="forest-row"><span>{{ index .label site.Language.Lang }}</span><div class="forest-track"><i class="forest-reference" style="left:{{ printf "%.2f" $panel.reference }}%"></i><i class="forest-interval" style="left:{{ printf "%.2f" .start }}%;width:{{ printf "%.2f" .width }}%"></i><i class="forest-dot" style="left:{{ printf "%.2f" .point }}%"></i></div><b>{{ .display }}</b></div>{{ end }}<div class="forest-axis">{{ range .ticks }}<span style="left:{{ printf "%.2f" .pos }}%">{{ .value }}</span>{{ end }}</div></div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "topics" }}
+          <ol class="topic-cards">{{ range .rows }}<li><h4>{{ index .label site.Language.Lang }}</h4><p>{{ index .detail site.Language.Lang }}</p></li>{{ end }}</ol>
           <p class="result-note">{{ index .note site.Language.Lang }}</p>
         {{ else if eq .type "importance" }}
           <div class="bar-chart importance-chart" aria-label="{{ index .title site.Language.Lang }}">{{ range .rows }}{{ $width := math.Div .value $panel.max | math.Mul 100 }}<div class="bar-row"><span>{{ index .label site.Language.Lang }}</span><span class="bar-track"><i style="width:{{ printf "%.2f" $width }}%"></i></span><b>{{ .display }}</b></div>{{ end }}</div>

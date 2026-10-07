@@ -7,27 +7,51 @@ period = '105,138 survey records'
 visual = 'network'
 weight = 1
 chart = 'lifestyle'
-figureAlt = 'Two charts: the ten largest reported direct partial correlations with the SDS score and changes in displayed network edges as the absolute correlation threshold rises.'
-figureCaption = 'Left: the ten strongest reported conditional associations with SDS score. Right: the displayed network becomes smaller as the readability threshold rises; it is a plotting threshold, not a significance test. The separate holdout checks directional repeatability within this survey.'
+inlineCharts = true
+sourceDocument = 'Lifestyle_Network_Depressive_Symptoms_Manuscript.docx'
+figureAlt = 'Report-based charts on cohort composition, analysis stages, and quantitative results.'
+figureCaption = 'Values transcribed from the supplied manuscript or report. Arithmetic reconstructions are labeled; these charts do not represent a new analysis of raw data.'
 +++
 ## Research question
 
-How do recorded lifestyle, work, and demographic variables relate conditionally to depressive-symptom scores in a cancer-screening survey? Do the selected connections keep their direction in different respondents from the same survey?
+This project studies how lifestyle, work, and demographic variables co-occur with depressive symptoms in a cancer-screening survey. It asks three connected questions: which variables have direct conditional associations with the SDS symptom score, whether those associations repeat in other respondents, and whether the network differs across sex and age groups.
 
-## Data and approach
+## Data and measurement {#research-data}
 
-The supplied manuscript analyzes **105,138 cleaned survey records** in a **36-node partial-correlation network**. Ledoit–Wolf shrinkage was used for covariance estimation. The displayed network contains 107 of 595 possible pairwise connections at an absolute-correlation display threshold of 0.04.
+The manuscript analyzes 105,138 cleaned respondent records. The 36-node network includes the continuous SDS standard score alongside age, education, insurance, BMI, smoking, alcohol, diet, sleep, work, commuting, and physical activity. SDS measures symptom severity; it does not establish a clinical depression diagnosis. Several exposures are ordered questionnaire categories rather than continuous quantities.
 
-A separate, age-stratified split assigned **63,082 respondents to discovery** and **42,056 to the holdout**. The 13 displayed SDS-score edges selected in discovery all kept the same direction in the holdout; **12 of 13** also remained above the 0.04 display threshold.
+| Analysis group | Records | Purpose |
+| --- | ---: | --- |
+| Women / men | 66,151 / 38,987 | Sex-specific networks |
+| Ages 18–34 / 35–49 / 50+ | 44,310 / 39,061 / 21,767 | Prespecified descriptive strata |
+| Discovery / holdout | 63,082 / 42,056 | Age-stratified 60% / 40% internal replication |
 
-## What the results show
+Records without an SDS score were excluded. Remaining missing variables were median-filled in network preparation. A separate upstream issue concerns secondhand smoke: only 29,928 respondents had an observed source value; 75,210 values had been filled by random-forest iterative imputation. This is important when interpreting that edge.
 
-Longer recorded sleep latency, higher sugary-drink intake categories, and more frequent sleep-medication use had positive partial correlations with SDS score. These are conditional associations among questionnaire variables. They do not establish that a behavior causes depressive symptoms, that an inverse association is protective, or that a respondent has a clinical depression diagnosis.
+## Analytical methods {#research-methods}
 
-All SDS-score edge differences between the analyzed sex and age groups included zero under the manuscript's simultaneous bootstrap bands. This analysis did not find clear demographic differences in individual SDS links after accounting for the tested edges.
+1. Standardize variables within each analysis sample, estimate a Ledoit–Wolf shrinkage covariance matrix, and convert its inverse into partial correlations. Each edge describes a linear association conditional on the other modeled variables.
+2. Display edges with |r| ≥ 0.04 to improve readability. This is a plotting rule, not a significance threshold. Node strength summarizes absolute displayed connections, not effects on SDS.
+3. Re-estimate the network in two equal random halves. Separately, select SDS links in the 60% discovery sample and check their direction and magnitude in the disjoint 40% holdout. These are two different internal checks.
+4. Compare 595 edges among 35 non-age variables for sex and three pairwise age contrasts, using 200 within-group bootstrap resamples and simultaneous uncertainty bands within each contrast. The main network has 36 nodes; 595 is the group-comparison edge count, not all possible pairs in that network.
+5. Repeat estimation after excluding identical SDS response patterns, among observed-source secondhand-smoke records, and at display thresholds from 0.03 to 0.06.
 
-## Sensitivity and limits
+## Main results {#research-results}
 
-The number of displayed connections depends on the prespecified figure threshold: as it rises from 0.03 to 0.06, the reported total goes from 130 to 62 connections, while direct SDS links go from 15 to 7. The threshold is used to make the graph readable; it does not indicate statistical significance.
+The full network displays 107 edges, including 13 direct SDS-score links. All 13 discovery-selected links keep their direction in the holdout; 12 also remain above 0.04. Light leisure activity is a threshold-sensitive case: discovery r = −0.043 versus holdout r = −0.033. The separate split-half check also retains 12 of 13 main SDS links, with tea frequency as its boundary case.
 
-After identifying respondents with identical answers across the 20 SDS items, the manuscript reports that **31,013 records (29.5%)** had that pattern. The secondhand-smoke edge weakened from **r = −0.125** in the full sample to **r = −0.068** in the sensitivity sample. This is a material data-quality limitation, not evidence that exposure is protective. The random holdout tests repeatability within one survey and cannot rule out artifacts shared across both halves. The study is cross-sectional.
+{{< research-results >}}
+
+### Sleep and diet associations
+
+Sleep latency (r = +0.077), sugary-drink intake category (+0.068), and sleep-medication frequency (+0.067) have positive full-sample SDS associations. After excluding identical SDS answers, these become +0.106, +0.062, and +0.072. Their consistently positive direction is more defensible than treating any coefficient as an intervention effect; medication use may reflect existing sleep problems or symptom severity.
+
+### Group comparisons and data quality
+
+Four women–men edge differences and 1, 3, and 1 differences in the three age contrasts have simultaneous bands excluding zero. These involve lifestyle-to-lifestyle links. No direct SDS-score edge difference excludes zero. This does not prove equality between populations; it means this analysis did not resolve an individual SDS-link difference under its across-edge criterion.
+
+Identical answers across all 20 SDS items occur in 31,013 records (29.5%). The secondhand-smoke association weakens from −0.125 to −0.068 after their exclusion and to −0.058 in the observed-exposure subset. Daytime sleepiness changes sign in the response-pattern check. These results motivate a questionnaire and data-processing audit, rather than a protective interpretation of an inverse edge.
+
+## Interpretation and limits {#research-limits}
+
+The study is cross-sectional and self-reported. Partial correlations depend on numeric coding, variable inclusion, linearity, and missing-data handling. Bootstrap precision is limited by 200 replicates, and simultaneous bands cover edges within each contrast rather than all four contrasts together. Internal random splits share the same survey and cleaning decisions. External replication and longitudinal measurements are needed to assess transportability and temporal order.

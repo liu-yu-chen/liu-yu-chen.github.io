@@ -3,134 +3,1462 @@
     "panels": [
       {
         "type": "diverging",
-        "title": {"en": "Ten largest direct SDS-score associations", "zh": "与 SDS 得分直接关联最大的十项"},
-        "subtitle": {"en": "Full-sample partial correlation; 36-node network (n = 105,138).", "zh": "全样本偏相关；36 节点网络（n = 105,138）。"},
-        "min": -0.14, "max": 0.14,
-        "ticks": [{"value":"−0.14","pos":0},{"value":"0","pos":50},{"value":"+0.14","pos":100}],
-        "rows": [
-          {"label":{"en":"Secondhand-smoke exposure duration","zh":"二手烟暴露时间"},"value":-0.125,"display":"−0.125"},
-          {"label":{"en":"Health insurance","zh":"医疗保险"},"value":-0.108,"display":"−0.108"},
-          {"label":{"en":"Education","zh":"受教育程度"},"value":-0.088,"display":"−0.088"},
-          {"label":{"en":"Sleep latency","zh":"入睡潜伏时间"},"value":0.077,"display":"+0.077"},
-          {"label":{"en":"Sugary-drink intake category","zh":"含糖饮料摄入类别"},"value":0.068,"display":"+0.068"},
-          {"label":{"en":"Sleep-medication frequency","zh":"助眠药使用频率"},"value":0.067,"display":"+0.067"},
-          {"label":{"en":"Daily work hours","zh":"每日工作时长"},"value":-0.066,"display":"−0.066"},
-          {"label":{"en":"Sleep duration","zh":"睡眠时长"},"value":-0.059,"display":"−0.059"},
-          {"label":{"en":"Daytime sleepiness","zh":"日间嗜睡"},"value":-0.056,"display":"−0.056"},
-          {"label":{"en":"Commute time","zh":"通勤时长"},"value":0.049,"display":"+0.049"}
+        "title": {
+          "en": "Ten largest direct SDS-score associations",
+          "zh": "与 SDS 得分直接关联最大的十项"
+        },
+        "subtitle": {
+          "en": "Full-sample partial correlation; 36-node network (n = 105,138).",
+          "zh": "全样本偏相关；36 节点网络（n = 105,138）。"
+        },
+        "min": -0.14,
+        "max": 0.14,
+        "ticks": [
+          {
+            "value": "−0.14",
+            "pos": 0
+          },
+          {
+            "value": "0",
+            "pos": 50
+          },
+          {
+            "value": "+0.14",
+            "pos": 100
+          }
         ],
-        "note": {"en":"A positive value means a higher recorded variable code co-occurs with a higher SDS score, conditional on the other modeled nodes. It does not establish causation or protection.","zh":"正值表示该问卷变量的记录编码较高时，与更高的 SDS 得分条件共现；这不代表因果关系或保护作用。"}
+        "rows": [
+          {
+            "label": {
+              "en": "Secondhand-smoke exposure duration",
+              "zh": "二手烟暴露时间"
+            },
+            "value": -0.125,
+            "display": "−0.125"
+          },
+          {
+            "label": {
+              "en": "Health insurance",
+              "zh": "医疗保险"
+            },
+            "value": -0.108,
+            "display": "−0.108"
+          },
+          {
+            "label": {
+              "en": "Education",
+              "zh": "受教育程度"
+            },
+            "value": -0.088,
+            "display": "−0.088"
+          },
+          {
+            "label": {
+              "en": "Sleep latency",
+              "zh": "入睡潜伏时间"
+            },
+            "value": 0.077,
+            "display": "+0.077"
+          },
+          {
+            "label": {
+              "en": "Sugary-drink intake category",
+              "zh": "含糖饮料摄入类别"
+            },
+            "value": 0.068,
+            "display": "+0.068"
+          },
+          {
+            "label": {
+              "en": "Sleep-medication frequency",
+              "zh": "助眠药使用频率"
+            },
+            "value": 0.067,
+            "display": "+0.067"
+          },
+          {
+            "label": {
+              "en": "Daily work hours",
+              "zh": "每日工作时长"
+            },
+            "value": -0.066,
+            "display": "−0.066"
+          },
+          {
+            "label": {
+              "en": "Sleep duration",
+              "zh": "睡眠时长"
+            },
+            "value": -0.059,
+            "display": "−0.059"
+          },
+          {
+            "label": {
+              "en": "Daytime sleepiness",
+              "zh": "日间嗜睡"
+            },
+            "value": -0.056,
+            "display": "−0.056"
+          },
+          {
+            "label": {
+              "en": "Commute time",
+              "zh": "通勤时长"
+            },
+            "value": 0.049,
+            "display": "+0.049"
+          }
+        ],
+        "note": {
+          "en": "A positive value means a higher recorded variable code co-occurs with a higher SDS score, conditional on the other modeled nodes. It does not establish causation or protection.",
+          "zh": "正值表示该问卷变量的记录编码较高时，与更高的 SDS 得分条件共现；这不代表因果关系或保护作用。"
+        }
       },
       {
         "type": "thresholds",
-        "title": {"en":"How the plotting threshold changes the displayed network","zh":"绘图阈值如何改变网络展示"},
-        "subtitle": {"en":"An absolute partial-correlation display cutoff, not a statistical-significance test.","zh":"绝对偏相关展示阈值，不是统计显著性检验。"},
+        "title": {
+          "en": "How the plotting threshold changes the displayed network",
+          "zh": "绘图阈值如何改变网络展示"
+        },
+        "subtitle": {
+          "en": "An absolute partial-correlation display cutoff, not a statistical-significance test.",
+          "zh": "绝对偏相关展示阈值，不是统计显著性检验。"
+        },
         "max": 130,
         "series": [
-          {"label":{"en":"All displayed edges","zh":"网络展示连边"},"kind":"all","values":[130,107,87,62]},
-          {"label":{"en":"Direct SDS edges","zh":"SDS 得分直接连边"},"kind":"direct","values":[15,13,9,7]},
-          {"label":{"en":"Stable SDS edges","zh":"稳定的 SDS 连边"},"kind":"stable","values":[14,12,8,7]}
+          {
+            "label": {
+              "en": "All displayed edges",
+              "zh": "网络展示连边"
+            },
+            "kind": "all",
+            "values": [
+              130,
+              107,
+              87,
+              62
+            ]
+          },
+          {
+            "label": {
+              "en": "Direct SDS edges",
+              "zh": "SDS 得分直接连边"
+            },
+            "kind": "direct",
+            "values": [
+              15,
+              13,
+              9,
+              7
+            ]
+          },
+          {
+            "label": {
+              "en": "Stable SDS edges",
+              "zh": "稳定的 SDS 连边"
+            },
+            "kind": "stable",
+            "values": [
+              14,
+              12,
+              8,
+              7
+            ]
+          }
         ],
-        "thresholds":["0.03","0.04","0.05","0.06"]
+        "thresholds": [
+          "0.03",
+          "0.04",
+          "0.05",
+          "0.06"
+        ]
+      },
+      {
+        "type": "bars",
+        "title": {
+          "en": "Who is represented in the age strata?",
+          "zh": "年龄分层包含哪些受访者？"
+        },
+        "subtitle": {
+          "en": "Prespecified descriptive age bands; total n = 105,138.",
+          "zh": "预设的描述性年龄层；总样本 n = 105,138。"
+        },
+        "max": 45000,
+        "rows": [
+          {
+            "label": {
+              "en": "18–34 years",
+              "zh": "18–34 岁"
+            },
+            "value": 44310,
+            "display": "44,310"
+          },
+          {
+            "label": {
+              "en": "35–49 years",
+              "zh": "35–49 岁"
+            },
+            "value": 39061,
+            "display": "39,061"
+          },
+          {
+            "label": {
+              "en": "50+ years",
+              "zh": "50 岁及以上"
+            },
+            "value": 21767,
+            "display": "21,767"
+          }
+        ],
+        "note": {
+          "en": "Sex strata: 66,151 women and 38,987 men. These are reporting groups, not clinical thresholds.",
+          "zh": "性别分层：女性 66,151 人、男性 38,987 人。年龄分层不是临床阈值。"
+        }
+      },
+      {
+        "type": "comparison",
+        "title": {
+          "en": "Do the SDS links survive a data-quality check?",
+          "zh": "数据质量检查后，SDS 关联如何变化？"
+        },
+        "subtitle": {
+          "en": "Full sample versus exclusion of identical answers to all 20 SDS items.",
+          "zh": "全样本与排除 20 项 SDS 答案完全相同记录后的偏相关。"
+        },
+        "columns": [
+          {
+            "en": "Full sample",
+            "zh": "全样本"
+          },
+          {
+            "en": "Sensitivity sample",
+            "zh": "敏感性样本"
+          }
+        ],
+        "min": -0.14,
+        "max": 0.14,
+        "rows": [
+          {
+            "label": {
+              "en": "Secondhand smoke",
+              "zh": "二手烟暴露"
+            },
+            "values": [
+              -0.125,
+              -0.068
+            ]
+          },
+          {
+            "label": {
+              "en": "Sleep latency",
+              "zh": "入睡潜伏时间"
+            },
+            "values": [
+              0.077,
+              0.106
+            ]
+          },
+          {
+            "label": {
+              "en": "Sugary drinks",
+              "zh": "含糖饮料摄入"
+            },
+            "values": [
+              0.068,
+              0.062
+            ]
+          },
+          {
+            "label": {
+              "en": "Sleep medication",
+              "zh": "助眠药使用"
+            },
+            "values": [
+              0.067,
+              0.072
+            ]
+          }
+        ],
+        "note": {
+          "en": "Lines connect two point estimates, not confidence intervals. The excluded pattern occurs in 31,013 records (29.5%); it flags a possible quality issue, not proven invalid answers.",
+          "zh": "线段连接两次估计值，并非置信区间。被筛出的同答模式有 31,013 份（29.5%），属于质量筛查标记，不等同于答案无效。"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "title": {
+          "en": "Survey preparation",
+          "zh": "问卷整理"
+        },
+        "detail": {
+          "en": "SDS scoring and missing-data handling",
+          "zh": "SDS 计分与缺失数据处理"
+        }
+      },
+      {
+        "title": {
+          "en": "Network estimation",
+          "zh": "网络估计"
+        },
+        "detail": {
+          "en": "Standardization → shrinkage covariance → partial correlations",
+          "zh": "标准化 → 收缩协方差 → 偏相关"
+        }
+      },
+      {
+        "title": {
+          "en": "Internal replication",
+          "zh": "内部重复检验"
+        },
+        "detail": {
+          "en": "Split-half and disjoint discovery/holdout",
+          "zh": "半样本与独立发现 / 留出样本"
+        }
+      },
+      {
+        "title": {
+          "en": "Robustness checks",
+          "zh": "稳健性检查"
+        },
+        "detail": {
+          "en": "Demographic contrasts and response-pattern sensitivity",
+          "zh": "人口组间比较与同答模式敏感性"
+        }
       }
     ]
   },
   "abm": {
     "panels": [
       {
-        "type":"trend",
-        "title":{"en":"LLM adoption in ABM publications","zh":"主体建模论文中的大语言模型应用"},
-        "subtitle":{"en":"Share of papers in the supplied corpus; annual classified-paper counts are shown below.","zh":"提供语料中的年度论文比例；下方同时列出每年分类到的论文数。"},
-        "min":0,"max":6,"unit":"%",
-        "points":[{"label":"2023","value":1.50,"display":"1.50%","count":32},{"label":"2024","value":2.75,"display":"2.75%","count":63},{"label":"2025","value":5.65,"display":"5.65%","count":141}],
-        "note":{"en":"Cochran–Armitage trend p < 0.001. This corpus covers the early 2023–2025 diffusion window.","zh":"Cochran–Armitage 趋势检验 p < 0.001。该语料只覆盖 2023–2025 年的早期扩散阶段。"}
+        "type": "trend",
+        "title": {
+          "en": "LLM adoption in ABM publications",
+          "zh": "主体建模论文中的大语言模型应用"
+        },
+        "subtitle": {
+          "en": "Share of papers in the supplied corpus; annual classified-paper counts are shown below.",
+          "zh": "提供语料中的年度论文比例；下方同时列出每年分类到的论文数。"
+        },
+        "min": 0,
+        "max": 6,
+        "unit": "%",
+        "points": [
+          {
+            "label": "2023",
+            "value": 1.5,
+            "display": "1.50%",
+            "count": 32
+          },
+          {
+            "label": "2024",
+            "value": 2.75,
+            "display": "2.75%",
+            "count": 63
+          },
+          {
+            "label": "2025",
+            "value": 5.65,
+            "display": "5.65%",
+            "count": 141
+          }
+        ],
+        "note": {
+          "en": "Cochran–Armitage trend p < 0.001. This corpus covers the early 2023–2025 diffusion window.",
+          "zh": "Cochran–Armitage 趋势检验 p < 0.001。该语料只覆盖 2023–2025 年的早期扩散阶段。"
+        }
       },
       {
-        "type":"stacked",
-        "title":{"en":"What LLMs do in classified ABM papers","zh":"可分类用途的论文中，大语言模型承担什么角色"},
-        "subtitle":{"en":"Role classifiable in 235 papers, out of 236 identified LLM papers.","zh":"236 篇识别到的大语言模型相关论文中，235 篇可分类其用途。"},
-        "total":235,
-        "segments":[
-          {"label":{"en":"Agent behavior or decisions","zh":"主体行为或决策"},"value":140,"percent":59.6,"display":"59.6%"},
-          {"label":{"en":"Supporting tasks","zh":"支持性工作"},"value":95,"percent":40.4,"display":"40.4%"}
+        "type": "stacked",
+        "title": {
+          "en": "What LLMs do in classified ABM papers",
+          "zh": "可分类用途的论文中，大语言模型承担什么角色"
+        },
+        "subtitle": {
+          "en": "Role classifiable in 235 papers, out of 236 identified LLM papers.",
+          "zh": "236 篇识别到的大语言模型相关论文中，235 篇可分类其用途。"
+        },
+        "total": 235,
+        "segments": [
+          {
+            "label": {
+              "en": "Agent behavior or decisions",
+              "zh": "主体行为或决策"
+            },
+            "value": 140,
+            "percent": 59.6,
+            "display": "59.6%",
+            "color": "green"
+          },
+          {
+            "label": {
+              "en": "Supporting tasks",
+              "zh": "支持性工作"
+            },
+            "value": 95,
+            "percent": 40.4,
+            "display": "40.4%",
+            "color": "sand"
+          }
         ],
-        "note":{"en":"A supporting role includes implementation, data, analysis, or interfaces. One additional paper's role was not classifiable.","zh":"支持性工作包括实现、数据、分析或界面。另有一篇论文的用途无法分类。"}
+        "note": {
+          "en": "A supporting role includes implementation, data, analysis, or interfaces. One additional paper's role was not classifiable.",
+          "zh": "支持性工作包括实现、数据、分析或界面。另有一篇论文的用途无法分类。"
+        }
+      },
+      {
+        "type": "bars",
+        "title": {
+          "en": "Leading primary research domains",
+          "zh": "主要研究领域构成"
+        },
+        "subtitle": {
+          "en": "Six reported primary categories; denominator = 29,139 papers.",
+          "zh": "报告中的六个主要分类；分母为 29,139 篇论文。"
+        },
+        "max": 25,
+        "rows": [
+          {
+            "label": {
+              "en": "Epidemiology / public health",
+              "zh": "流行病学 / 公共卫生"
+            },
+            "value": 24.95,
+            "display": "24.95%"
+          },
+          {
+            "label": {
+              "en": "Simulation methodology",
+              "zh": "仿真方法"
+            },
+            "value": 17.11,
+            "display": "17.11%"
+          },
+          {
+            "label": {
+              "en": "Ecology / environment",
+              "zh": "生态 / 环境"
+            },
+            "value": 15.66,
+            "display": "15.66%"
+          },
+          {
+            "label": {
+              "en": "Transport",
+              "zh": "交通"
+            },
+            "value": 9.79,
+            "display": "9.79%"
+          },
+          {
+            "label": {
+              "en": "Social / opinion dynamics",
+              "zh": "社会 / 舆论动态"
+            },
+            "value": 8.53,
+            "display": "8.53%"
+          },
+          {
+            "label": {
+              "en": "Urban / land-use systems",
+              "zh": "城市 / 土地利用"
+            },
+            "value": 6.7,
+            "display": "6.70%"
+          }
+        ],
+        "note": {
+          "en": "Selected primary categories are shown; omitted categories explain the remainder. Multi-label subthemes use a different denominator.",
+          "zh": "仅展示主要分类，剩余比例属于未列分类。多标签子主题使用另一分母。"
+        }
+      },
+      {
+        "type": "bars",
+        "title": {
+          "en": "Where are LLM-enabled papers concentrated?",
+          "zh": "LLM 相关论文集中在哪些领域？"
+        },
+        "subtitle": {
+          "en": "Papers with a classifiable LLM role (n = 235).",
+          "zh": "可分类 LLM 用途的论文（n = 235）。"
+        },
+        "max": 85,
+        "rows": [
+          {
+            "label": {
+              "en": "Social / opinion dynamics",
+              "zh": "社会 / 舆论动态"
+            },
+            "value": 81,
+            "display": "81"
+          },
+          {
+            "label": {
+              "en": "Health / epidemiology",
+              "zh": "健康 / 流行病学"
+            },
+            "value": 58,
+            "display": "58"
+          },
+          {
+            "label": {
+              "en": "AI / multi-agent computing",
+              "zh": "AI / 多智能体计算"
+            },
+            "value": 28,
+            "display": "28"
+          },
+          {
+            "label": {
+              "en": "Policy / disaster response",
+              "zh": "政策 / 灾害应对"
+            },
+            "value": 25,
+            "display": "25"
+          },
+          {
+            "label": {
+              "en": "Sustainability / energy",
+              "zh": "可持续发展 / 能源"
+            },
+            "value": 21,
+            "display": "21"
+          },
+          {
+            "label": {
+              "en": "Transport / urban mobility",
+              "zh": "交通 / 城市出行"
+            },
+            "value": 18,
+            "display": "18"
+          }
+        ],
+        "note": {
+          "en": "Six domains account for 231 papers; two further domains contain two papers each. Classification reflects titles and abstracts.",
+          "zh": "六个领域共 231 篇；另外两个领域各有 2 篇。分类依据标题与摘要。"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "title": {
+          "en": "Corpus construction",
+          "zh": "语料构建"
+        },
+        "detail": {
+          "en": "Collect, deduplicate, enrich abstracts, filter",
+          "zh": "采集、去重、补摘要与筛选"
+        }
+      },
+      {
+        "title": {
+          "en": "Text classification",
+          "zh": "文本分类"
+        },
+        "detail": {
+          "en": "Title/abstract labels with explicit LLM-use rules",
+          "zh": "依据标题 / 摘要与明确 LLM 使用规则分类"
+        }
+      },
+      {
+        "title": {
+          "en": "Trend analysis",
+          "zh": "趋势分析"
+        },
+        "detail": {
+          "en": "Counts, shares, logistic and Poisson models",
+          "zh": "数量、比例、Logistic 与 Poisson 模型"
+        }
+      },
+      {
+        "title": {
+          "en": "Collaboration analysis",
+          "zh": "协作分析"
+        },
+        "detail": {
+          "en": "Coauthorship and community structure",
+          "zh": "合著网络与社群结构"
+        }
       }
     ]
   },
   "gastric": {
-    "panels":[
+    "panels": [
       {
-        "type":"funnel",
-        "title":{"en":"From shared expression signals to the final MR plot","zh":"从共享表达信号到最终 MR 图"},
-        "subtitle":{"en":"The supplied report's gene counts at each filtering stage.","zh":"提供报告中各筛选阶段的基因数量。"},
-        "stages":[
-          {"count":"581","label":{"en":"WGCNA hub genes shared across datasets","zh":"两个数据集共有的 WGCNA 枢纽基因"}},
-          {"count":"58","label":{"en":"Random Forest features","zh":"随机森林特征"}},
-          {"count":"14","label":{"en":"LASSO candidates","zh":"LASSO 候选基因"}},
-          {"count":"8","label":{"en":"Eligible for cis-eQTL follow-up","zh":"符合 cis-eQTL 后续筛查条件"}},
-          {"count":"6","label":{"en":"Passed instrument screening","zh":"通过工具变量筛选"}},
-          {"count":"4","label":{"en":"Shown in the final MR plot","zh":"最终 MR 图展示"}}
+        "type": "funnel",
+        "title": {
+          "en": "From shared expression signals to the final MR plot",
+          "zh": "从共享表达信号到最终 MR 图"
+        },
+        "subtitle": {
+          "en": "The supplied report's gene counts at each filtering stage.",
+          "zh": "提供报告中各筛选阶段的基因数量。"
+        },
+        "stages": [
+          {
+            "count": "581",
+            "label": {
+              "en": "WGCNA hub genes shared across datasets",
+              "zh": "两个数据集共有的 WGCNA 枢纽基因"
+            }
+          },
+          {
+            "count": "58",
+            "label": {
+              "en": "Random Forest features",
+              "zh": "随机森林特征"
+            }
+          },
+          {
+            "count": "14",
+            "label": {
+              "en": "LASSO candidates",
+              "zh": "LASSO 候选基因"
+            }
+          },
+          {
+            "count": "8",
+            "label": {
+              "en": "Eligible for cis-eQTL follow-up",
+              "zh": "符合 cis-eQTL 后续筛查条件"
+            }
+          },
+          {
+            "count": "6",
+            "label": {
+              "en": "Passed instrument screening",
+              "zh": "通过工具变量筛选"
+            }
+          },
+          {
+            "count": "4",
+            "label": {
+              "en": "Shown in the final MR plot",
+              "zh": "最终 MR 图展示"
+            }
+          }
         ],
-        "note":{"en":"None of the four gene associations in the report's final MR results reached statistical significance.","zh":"报告最终 MR 结果中的 4 个基因关联均未达到统计学显著性。"}
+        "note": {
+          "en": "None of the four gene associations in the report's final MR results reached statistical significance.",
+          "zh": "报告最终 MR 结果中的 4 个基因关联均未达到统计学显著性。"
+        }
+      },
+      {
+        "type": "grouped",
+        "title": {
+          "en": "Cases and controls in the expression analysis",
+          "zh": "表达分析中的病例与对照"
+        },
+        "subtitle": {
+          "en": "Two GEO microarray cohorts used in the reported intersection.",
+          "zh": "报告交集分析使用的两组 GEO 芯片数据。"
+        },
+        "max": 55,
+        "series": [
+          {
+            "en": "Cases",
+            "zh": "病例"
+          },
+          {
+            "en": "Controls",
+            "zh": "对照"
+          }
+        ],
+        "rows": [
+          {
+            "label": {
+              "en": "GC · GSE146996",
+              "zh": "胃癌 · GSE146996"
+            },
+            "values": [
+              50,
+              15
+            ]
+          },
+          {
+            "label": {
+              "en": "GIST · GSE225819",
+              "zh": "GIST · GSE225819"
+            },
+            "values": [
+              20,
+              20
+            ]
+          }
+        ],
+        "note": {
+          "en": "These are separate disease cohorts, not a cohort of people with both tumors.",
+          "zh": "两组为不同疾病队列，不是同时患两种肿瘤的共病人群队列。"
+        }
+      },
+      {
+        "type": "grouped",
+        "title": {
+          "en": "Differential-expression screening",
+          "zh": "差异表达筛选结果"
+        },
+        "subtitle": {
+          "en": "Reported gene counts at FDR < 0.05 and |log₂FC| > 1.",
+          "zh": "筛选标准为 FDR < 0.05 且 |log₂FC| > 1，数量取自报告。"
+        },
+        "max": 3600,
+        "series": [
+          {
+            "en": "Upregulated",
+            "zh": "上调"
+          },
+          {
+            "en": "Downregulated",
+            "zh": "下调"
+          }
+        ],
+        "rows": [
+          {
+            "label": {
+              "en": "GC · GSE146996",
+              "zh": "胃癌 · GSE146996"
+            },
+            "values": [
+              3452,
+              692
+            ]
+          },
+          {
+            "label": {
+              "en": "GIST · GSE225819",
+              "zh": "GIST · GSE225819"
+            },
+            "values": [
+              3529,
+              3037
+            ]
+          }
+        ],
+        "note": {
+          "en": "Totals: 4,144 GC genes and 6,566 GIST genes. These counts are not the subsequent WGCNA module sizes.",
+          "zh": "合计为胃癌 4,144 个、GIST 6,566 个基因；不等同于后续 WGCNA 模块大小。"
+        }
+      },
+      {
+        "type": "overlap",
+        "title": {
+          "en": "Shared turquoise-module genes",
+          "zh": "turquoise 模块的共同基因"
+        },
+        "subtitle": {
+          "en": "GC module: 2,872 genes · GIST module: 1,905 genes.",
+          "zh": "胃癌模块 2,872 个基因；GIST 模块 1,905 个基因。"
+        },
+        "left": {
+          "en": "GC only",
+          "zh": "胃癌模块独有"
+        },
+        "right": {
+          "en": "GIST only",
+          "zh": "GIST 模块独有"
+        },
+        "shared": {
+          "en": "Shared",
+          "zh": "交集"
+        },
+        "counts": [
+          2291,
+          581,
+          1324
+        ],
+        "note": {
+          "en": "Counts reconstructed by subtraction from the report; circle areas are schematic and not proportional. Shared module membership is not proof of a causal mechanism.",
+          "zh": "独有数量由报告模块大小减去交集得到；圆面积为示意、不按数量比例缩放。共享模块成员关系不能证明因果机制。"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "title": {
+          "en": "Expression screening",
+          "zh": "表达筛选"
+        },
+        "detail": {
+          "en": "limma differential expression and WGCNA",
+          "zh": "limma 差异表达与 WGCNA"
+        }
+      },
+      {
+        "title": {
+          "en": "Biological context",
+          "zh": "生物学背景"
+        },
+        "detail": {
+          "en": "Module intersection → GO / KEGG / PPI",
+          "zh": "模块交集 → GO / KEGG / PPI"
+        }
+      },
+      {
+        "title": {
+          "en": "Feature selection",
+          "zh": "特征筛选"
+        },
+        "detail": {
+          "en": "Random Forest → ten-fold LASSO",
+          "zh": "随机森林 → 十折 LASSO"
+        }
+      },
+      {
+        "title": {
+          "en": "Genetic follow-up",
+          "zh": "遗传分析"
+        },
+        "detail": {
+          "en": "cis-eQTL and GWAS screening → MR",
+          "zh": "cis-eQTL / GWAS 筛选 → MR"
+        }
       }
     ]
   },
   "cervical": {
-    "panels":[
+    "panels": [
       {
-        "type":"cohorts",
-        "title":{"en":"Two data tables, different denominators","zh":"两份数据表，分母各不相同"},
-        "subtitle":{"en":"Expression samples and clinical follow-up are separate analyses.","zh":"表达样本与临床随访属于不同的分析表。"},
-        "cards":[
-          {"value":"328","label":{"en":"expression samples","zh":"表达样本"},"detail":{"en":"309 tumor · 19 normal","zh":"309 肿瘤 · 19 正常"}},
-          {"value":"14,794","label":{"en":"retained genes","zh":"保留基因"},"detail":{"en":"~16:1 tumor-to-normal ratio","zh":"肿瘤与正常样本约 16:1"}},
-          {"value":"312","label":{"en":"clinical survival records","zh":"临床生存记录"},"detail":{"en":"separate clinical table","zh":"独立临床数据表"}},
-          {"value":"178","label":{"en":"DFI follow-up records","zh":"DFI 随访记录"},"detail":{"en":"partial outcome coverage","zh":"部分结局数据缺失"}}
+        "type": "cohorts",
+        "title": {
+          "en": "Two data tables, different denominators",
+          "zh": "两份数据表，分母各不相同"
+        },
+        "subtitle": {
+          "en": "Expression samples and clinical follow-up are separate analyses.",
+          "zh": "表达样本与临床随访属于不同的分析表。"
+        },
+        "cards": [
+          {
+            "value": "328",
+            "label": {
+              "en": "expression samples",
+              "zh": "表达样本"
+            },
+            "detail": {
+              "en": "309 tumor · 19 normal",
+              "zh": "309 肿瘤 · 19 正常"
+            }
+          },
+          {
+            "value": "14,794",
+            "label": {
+              "en": "retained genes",
+              "zh": "保留基因"
+            },
+            "detail": {
+              "en": "~16:1 tumor-to-normal ratio",
+              "zh": "肿瘤与正常样本约 16:1"
+            }
+          },
+          {
+            "value": "312",
+            "label": {
+              "en": "clinical survival records",
+              "zh": "临床生存记录"
+            },
+            "detail": {
+              "en": "separate clinical table",
+              "zh": "独立临床数据表"
+            }
+          },
+          {
+            "value": "178",
+            "label": {
+              "en": "DFI follow-up records",
+              "zh": "DFI 随访记录"
+            },
+            "detail": {
+              "en": "partial outcome coverage",
+              "zh": "部分结局数据缺失"
+            }
+          }
         ]
       },
       {
-        "type":"bars",
-        "title":{"en":"Reported clinical outcome event rates","zh":"报告中的临床结局事件比例"},
-        "subtitle":{"en":"Descriptive rates in the clinical table; the report gives a smaller analyzable sample for DFI.","zh":"临床数据表中的描述性比例；报告显示 DFI 的可分析样本较少。"},
-        "max":25,
-        "rows":[
-          {"label":{"en":"Overall survival (OS)","zh":"总生存期（OS）"},"value":23.4,"display":"23.4%"},
-          {"label":{"en":"Disease-specific survival (DSS)","zh":"疾病特异性生存期（DSS）"},"value":18.2,"display":"18.2%"},
-          {"label":{"en":"Disease-free interval (DFI)","zh":"无病间期（DFI）"},"value":15.2,"display":"15.2%"},
-          {"label":{"en":"Progression-free interval (PFI)","zh":"无进展间期（PFI）"},"value":23.4,"display":"23.4%"}
+        "type": "bars",
+        "title": {
+          "en": "Reported clinical outcome event rates",
+          "zh": "报告中的临床结局事件比例"
+        },
+        "subtitle": {
+          "en": "Descriptive rates in the clinical table; the report gives a smaller analyzable sample for DFI.",
+          "zh": "临床数据表中的描述性比例；报告显示 DFI 的可分析样本较少。"
+        },
+        "max": 25,
+        "rows": [
+          {
+            "label": {
+              "en": "Overall survival (OS)",
+              "zh": "总生存期（OS）"
+            },
+            "value": 23.4,
+            "display": "23.4%"
+          },
+          {
+            "label": {
+              "en": "Disease-specific survival (DSS)",
+              "zh": "疾病特异性生存期（DSS）"
+            },
+            "value": 18.2,
+            "display": "18.2%"
+          },
+          {
+            "label": {
+              "en": "Disease-free interval (DFI)",
+              "zh": "无病间期（DFI）"
+            },
+            "value": 15.2,
+            "display": "15.2%"
+          },
+          {
+            "label": {
+              "en": "Progression-free interval (PFI)",
+              "zh": "无进展间期（PFI）"
+            },
+            "value": 23.4,
+            "display": "23.4%"
+          }
         ],
-        "note":{"en":"Event rates are not independent treatment effects, a prospective risk estimate, or external validation.","zh":"事件比例不是独立治疗效果、前瞻性风险估计或外部验证。"}
+        "note": {
+          "en": "Event rates are not independent treatment effects, a prospective risk estimate, or external validation.",
+          "zh": "事件比例不是独立治疗效果、前瞻性风险估计或外部验证。"
+        }
+      },
+      {
+        "type": "bars",
+        "title": {
+          "en": "How complete are the recorded endpoints?",
+          "zh": "各生存终点的记录完整度"
+        },
+        "subtitle": {
+          "en": "Non-missing event-status counts in the report’s descriptive table.",
+          "zh": "报告描述统计表中，事件状态非缺失的记录数。"
+        },
+        "max": 312,
+        "rows": [
+          {
+            "label": {
+              "en": "OS",
+              "zh": "OS"
+            },
+            "value": 312,
+            "display": "312"
+          },
+          {
+            "label": {
+              "en": "DSS",
+              "zh": "DSS"
+            },
+            "value": 308,
+            "display": "308"
+          },
+          {
+            "label": {
+              "en": "DFI",
+              "zh": "DFI"
+            },
+            "value": 178,
+            "display": "178"
+          },
+          {
+            "label": {
+              "en": "PFI",
+              "zh": "PFI"
+            },
+            "value": 312,
+            "display": "312"
+          }
+        ],
+        "note": {
+          "en": "DSS has four missing statuses. DFI is available for 57.1% of the 312 clinical records (calculated); denominators differ across endpoints.",
+          "zh": "DSS 状态缺失 4 例；DFI 覆盖 312 例临床记录的 57.1%（计算值）。各终点分母不同。"
+        }
+      },
+      {
+        "type": "forest",
+        "title": {
+          "en": "Reported adjusted OS hazard ratios",
+          "zh": "报告中的调整后 OS 风险比"
+        },
+        "subtitle": {
+          "en": "Multivariable Cox model · point estimates and 95% confidence intervals.",
+          "zh": "多变量 Cox 模型：点估计与 95% 置信区间。"
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Age (per year)",
+              "zh": "年龄（每岁）"
+            },
+            "value": 1.0131,
+            "low": 0.9948,
+            "high": 1.0318,
+            "point": 26.107082278020304,
+            "start": 25.81376524432014,
+            "width": 0.5876222008363143,
+            "display": "1.01 (0.99–1.03)"
+          },
+          {
+            "label": {
+              "en": "Stage IB",
+              "zh": "IB 期"
+            },
+            "value": 3.1391,
+            "low": 0.7635,
+            "high": 12.9063,
+            "point": 44.30487012954073,
+            "start": 21.555595089749204,
+            "width": 45.49856843406009,
+            "display": "3.14 (0.76–12.91)"
+          },
+          {
+            "label": {
+              "en": "Stage IVA",
+              "zh": "IVA 期"
+            },
+            "value": 13.9087,
+            "low": 2.9251,
+            "high": 66.1343,
+            "point": 68.25776282071652,
+            "start": 43.168716966220764,
+            "width": 50.17788419626044,
+            "display": "13.91 (2.93–66.13)"
+          },
+          {
+            "label": {
+              "en": "Stage IVB",
+              "zh": "IVB 期"
+            },
+            "value": 10.213,
+            "low": 2.0531,
+            "high": 50.8043,
+            "point": 63.28797035534107,
+            "start": 37.47281761953632,
+            "width": 51.630450380765474,
+            "display": "10.21 (2.05–50.80)"
+          },
+          {
+            "label": {
+              "en": "Other stage",
+              "zh": "其他分期"
+            },
+            "value": 1.8628,
+            "low": 0.2618,
+            "high": 13.2561,
+            "point": 35.90763261687794,
+            "start": 4.332750877663956,
+            "width": 63.15172553442798,
+            "display": "1.86 (0.26–13.26)"
+          }
+        ],
+        "reference": 25.8976573734829,
+        "ticks": [
+          {
+            "value": "0.2",
+            "pos": 0.0
+          },
+          {
+            "value": "1",
+            "pos": 25.8976573734829
+          },
+          {
+            "value": "5",
+            "pos": 51.7953147469658
+          },
+          {
+            "value": "25",
+            "pos": 77.69297212044869
+          },
+          {
+            "value": "100",
+            "pos": 100.0
+          }
+        ],
+        "note": {
+          "en": "Logarithmic HR axis; HR = 1 is the reference line. Stage comparisons use the report’s model reference category, which is not named in its coefficient table. Wide intervals show substantial uncertainty; these are observational associations.",
+          "zh": "HR 轴为对数尺度，参考线为 HR = 1。分期相对于报告模型的参照组，但系数表未注明其名称。宽区间显示较大不确定性，结果属于观察性关联。"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "title": {
+          "en": "Data engineering",
+          "zh": "数据工程"
+        },
+        "detail": {
+          "en": "TCGA/GTEx transformation and gene filtering",
+          "zh": "TCGA / GTEx 转换与基因筛选"
+        }
+      },
+      {
+        "title": {
+          "en": "Feature ranking",
+          "zh": "特征排序"
+        },
+        "detail": {
+          "en": "Exploratory XGBoost tissue classification",
+          "zh": "探索性 XGBoost 组织分类"
+        }
+      },
+      {
+        "title": {
+          "en": "Survival description",
+          "zh": "生存描述"
+        },
+        "detail": {
+          "en": "Separate clinical table and KM comparisons",
+          "zh": "独立临床表与 KM 比较"
+        }
+      },
+      {
+        "title": {
+          "en": "Prognostic modeling",
+          "zh": "预后建模"
+        },
+        "detail": {
+          "en": "Univariable and multivariable Cox models",
+          "zh": "单变量与多变量 Cox 模型"
+        }
       }
     ]
   },
   "ev": {
-    "panels":[
+    "panels": [
       {
-        "type":"importance",
-        "title":{"en":"Reported random-forest feature importance","zh":"报告中的随机森林特征重要性"},
-        "subtitle":{"en":"Importance scores from the fitted purchase-intention model (survey n = 368).","zh":"购车意愿模型所报告的特征重要性（问卷 n = 368）。"},
-        "max":0.30,
-        "rows":[
-          {"label":{"en":"Occupation","zh":"职业"},"value":0.297,"display":"0.297"},
-          {"label":{"en":"Income","zh":"收入"},"value":0.272,"display":"0.272"},
-          {"label":{"en":"Education","zh":"学历"},"value":0.172,"display":"0.172"},
-          {"label":{"en":"Age","zh":"年龄"},"value":0.166,"display":"0.166"},
-          {"label":{"en":"Gender","zh":"性别"},"value":0.091,"display":"0.091"}
+        "type": "importance",
+        "title": {
+          "en": "Reported random-forest feature importance",
+          "zh": "报告中的随机森林特征重要性"
+        },
+        "subtitle": {
+          "en": "Importance scores from the fitted purchase-intention model (survey n = 368).",
+          "zh": "购车意愿模型所报告的特征重要性（问卷 n = 368）。"
+        },
+        "max": 0.3,
+        "rows": [
+          {
+            "label": {
+              "en": "Occupation",
+              "zh": "职业"
+            },
+            "value": 0.297,
+            "display": "0.297"
+          },
+          {
+            "label": {
+              "en": "Income",
+              "zh": "收入"
+            },
+            "value": 0.272,
+            "display": "0.272"
+          },
+          {
+            "label": {
+              "en": "Education",
+              "zh": "学历"
+            },
+            "value": 0.172,
+            "display": "0.172"
+          },
+          {
+            "label": {
+              "en": "Age",
+              "zh": "年龄"
+            },
+            "value": 0.166,
+            "display": "0.166"
+          },
+          {
+            "label": {
+              "en": "Gender",
+              "zh": "性别"
+            },
+            "value": 0.091,
+            "display": "0.091"
+          }
         ],
-        "note":{"en":"Model importance is descriptive; it does not show causal effects or population purchase probabilities.","zh":"模型重要性是描述性指标，不表示因果关系或总体购车概率。"}
+        "note": {
+          "en": "Model importance is descriptive; it does not show causal effects or population purchase probabilities.",
+          "zh": "模型重要性是描述性指标，不表示因果关系或总体购车概率。"
+        }
       },
       {
-        "type":"stacked",
-        "title":{"en":"Sentiment classification of online comments","zh":"线上评论的情感分类"},
-        "subtitle":{"en":"8,058 classified comments; separate from the 368-person survey.","zh":"8,058 条已分类评论，与 368 人问卷属于不同数据来源。"},
-        "total":8058,
-        "segments":[
-          {"label":{"en":"Positive","zh":"正面"},"value":4027,"percent":50,"display":"50.0%"},
-          {"label":{"en":"Neutral","zh":"中立"},"value":1950,"percent":24.2,"display":"24.2%"},
-          {"label":{"en":"Negative","zh":"负面"},"value":2081,"percent":25.8,"display":"25.8%"}
+        "type": "stacked",
+        "title": {
+          "en": "Sentiment classification of online comments",
+          "zh": "线上评论的情感分类"
+        },
+        "subtitle": {
+          "en": "8,058 classified comments; separate from the 368-person survey.",
+          "zh": "8,058 条已分类评论，与 368 人问卷属于不同数据来源。"
+        },
+        "total": 8058,
+        "segments": [
+          {
+            "label": {
+              "en": "Positive",
+              "zh": "正面"
+            },
+            "value": 4027,
+            "percent": 50,
+            "display": "50.0%",
+            "color": "green"
+          },
+          {
+            "label": {
+              "en": "Neutral",
+              "zh": "中立"
+            },
+            "value": 1950,
+            "percent": 24.2,
+            "display": "24.2%",
+            "color": "sand"
+          },
+          {
+            "label": {
+              "en": "Negative",
+              "zh": "负面"
+            },
+            "value": 2081,
+            "percent": 25.8,
+            "display": "25.8%",
+            "color": "blue"
+          }
         ],
-        "note":{"en":"Comment sentiment is not an estimate of sentiment among all Xiamen residents.","zh":"评论情感比例并非厦门全体居民情感的估计。"}
+        "note": {
+          "en": "Comment sentiment is not an estimate of sentiment among all Xiamen residents.",
+          "zh": "评论情感比例并非厦门全体居民情感的估计。"
+        }
+      },
+      {
+        "type": "bars",
+        "title": {
+          "en": "Frequently mentioned product terms",
+          "zh": "报告中高频产品词"
+        },
+        "subtitle": {
+          "en": "Selected entries from the report’s word-frequency table.",
+          "zh": "选取报告词频表中的部分条目。"
+        },
+        "max": 1200,
+        "rows": [
+          {
+            "label": {
+              "en": "Experience",
+              "zh": "体验"
+            },
+            "value": 1142,
+            "display": "1,142"
+          },
+          {
+            "label": {
+              "en": "Intelligence",
+              "zh": "智能"
+            },
+            "value": 1037,
+            "display": "1,037"
+          },
+          {
+            "label": {
+              "en": "Price",
+              "zh": "价格"
+            },
+            "value": 1017,
+            "display": "1,017"
+          },
+          {
+            "label": {
+              "en": "New energy",
+              "zh": "新能源"
+            },
+            "value": 1014,
+            "display": "1,014"
+          },
+          {
+            "label": {
+              "en": "Price cut",
+              "zh": "降价"
+            },
+            "value": 943,
+            "display": "943"
+          },
+          {
+            "label": {
+              "en": "Technology",
+              "zh": "技术"
+            },
+            "value": 701,
+            "display": "701"
+          },
+          {
+            "label": {
+              "en": "Space",
+              "zh": "空间"
+            },
+            "value": 652,
+            "display": "652"
+          },
+          {
+            "label": {
+              "en": "Functions",
+              "zh": "功能"
+            },
+            "value": 630,
+            "display": "630"
+          }
+        ],
+        "note": {
+          "en": "Reported word frequencies, not unique consumers or mutually exclusive comment counts. A text can mention several terms.",
+          "zh": "这是报告词频，不是独立消费者数，也不是互斥的评论数量；一条文本可以提及多个词。"
+        }
+      },
+      {
+        "type": "topics",
+        "title": {
+          "en": "Five LDA topic interpretations",
+          "zh": "五类 LDA 主题解释"
+        },
+        "subtitle": {
+          "en": "Report table: topic labels and representative keywords, without invented topic shares.",
+          "zh": "取自报告主题表：主题标签与代表词；原表未给出主题比例。"
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Passenger experience",
+              "zh": "乘客体验"
+            },
+            "detail": {
+              "en": "Seats · experience · audio",
+              "zh": "座椅 · 体验 · 音箱"
+            }
+          },
+          {
+            "label": {
+              "en": "Price",
+              "zh": "价格"
+            },
+            "detail": {
+              "en": "Price cuts · price · pressure",
+              "zh": "降价 · 价格 · 施压"
+            }
+          },
+          {
+            "label": {
+              "en": "Performance",
+              "zh": "性能"
+            },
+            "detail": {
+              "en": "Accelerator · braking · linearity",
+              "zh": "电门 · 刹车 · 线性"
+            }
+          },
+          {
+            "label": {
+              "en": "Appearance",
+              "zh": "外观"
+            },
+            "detail": {
+              "en": "Style · distinctiveness",
+              "zh": "风格 · 辨识度"
+            }
+          },
+          {
+            "label": {
+              "en": "Safety",
+              "zh": "安全"
+            },
+            "detail": {
+              "en": "Acceleration · tilt · traffic lights",
+              "zh": "加速 · 倾感 · 红绿灯"
+            }
+          }
+        ],
+        "note": {
+          "en": "Topic interpretation is a text-analysis aid for questionnaire design, not a ranking of population needs.",
+          "zh": "主题解释用于帮助设计问卷，不能视为总体需求的排名。"
+        }
+      },
+      {
+        "type": "stacked",
+        "title": {
+          "en": "Questionnaire yield",
+          "zh": "问卷有效回收情况"
+        },
+        "subtitle": {
+          "en": "403 distributed questionnaires; the report lists 368 valid responses.",
+          "zh": "发放 403 份问卷，报告列出 368 份有效答卷。"
+        },
+        "total": 403,
+        "segments": [
+          {
+            "label": {
+              "en": "Valid responses",
+              "zh": "有效答卷"
+            },
+            "value": 368,
+            "percent": 91.32,
+            "display": "91.32%",
+            "color": "green"
+          },
+          {
+            "label": {
+              "en": "Not counted as valid",
+              "zh": "未计入有效答卷"
+            },
+            "value": 35,
+            "percent": 8.68,
+            "display": "8.68%",
+            "color": "sand"
+          }
+        ],
+        "note": {
+          "en": "The remaining 35 is calculated as 403 − 368; the report does not separate non-return from exclusion. Yield does not prove representativeness.",
+          "zh": "剩余 35 份由 403 − 368 计算；报告未区分未回收和剔除。回收率不能证明代表性。"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "title": {
+          "en": "Online listening",
+          "zh": "网络文本分析"
+        },
+        "detail": {
+          "en": "8,058 texts → tokenization, sentiment and LDA",
+          "zh": "8,058 条文本 → 分词、情感与 LDA"
+        }
+      },
+      {
+        "title": {
+          "en": "Field survey",
+          "zh": "实地调查"
+        },
+        "detail": {
+          "en": "Stratified sampling, pilot and formal survey",
+          "zh": "分层抽样、预调查与正式问卷"
+        }
+      },
+      {
+        "title": {
+          "en": "Consumer analysis",
+          "zh": "消费者分析"
+        },
+        "detail": {
+          "en": "Descriptive statistics, RF and clustering",
+          "zh": "描述统计、随机森林与聚类"
+        }
+      },
+      {
+        "title": {
+          "en": "Interpretation",
+          "zh": "综合解释"
+        },
+        "detail": {
+          "en": "Combine survey results and shop observations",
+          "zh": "结合问卷与门店参与观察"
+        }
       }
     ]
   }

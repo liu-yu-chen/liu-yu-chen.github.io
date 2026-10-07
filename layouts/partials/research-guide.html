@@ -1,0 +1,13 @@
+{{ $charts := index site.Data.research_charts .Params.chart }}
+<nav class="research-jump" aria-label="{{ if eq site.Language.Lang "zh" }}研究页面目录{{ else }}Research page contents{{ end }}">
+  <a href="#research-data">{{ if eq site.Language.Lang "zh" }}数据{{ else }}Data{{ end }}</a>
+  <a href="#research-methods">{{ if eq site.Language.Lang "zh" }}方法{{ else }}Methods{{ end }}</a>
+  <a href="#research-results">{{ if eq site.Language.Lang "zh" }}结果{{ else }}Results{{ end }}</a>
+  <a href="#results-heading">{{ if eq site.Language.Lang "zh" }}图表{{ else }}Charts{{ end }}</a>
+  <a href="#research-limits">{{ if eq site.Language.Lang "zh" }}解释与局限{{ else }}Interpretation & limits{{ end }}</a>
+</nav>
+<ol class="research-workflow" aria-label="{{ if eq site.Language.Lang "zh" }}分析流程{{ else }}Analysis workflow{{ end }}">
+{{ range $i, $stage := $charts.workflow }}
+  <li><span class="workflow-number">{{ printf "%02d" (add $i 1) }}</span><h2>{{ index $stage.title site.Language.Lang }}</h2><p>{{ index $stage.detail site.Language.Lang }}</p></li>
+{{ end }}
+</ol>

@@ -207,7 +207,7 @@
     "other": "本页根据个人简历整理。各详情页明确区分进行中的研究、已有分析与项目经历，不代表论文或代码已公开发布。"
   },
   "resultsEyebrow": {"other":"项目分析结果"},
-  "resultsHeading": {"other":"一图看懂分析结果"},
+  "resultsHeading": {"other":"数据图表与分析结果"},
   "absoluteThreshold": {"other":"绝对相关阈值"},
   "projectSource": {"other":"项目摘要依据所提供的研究与课程材料整理。方法、样本数和局限均按各原始材料所报告的范围说明。"},
   "galleryIntro": {
