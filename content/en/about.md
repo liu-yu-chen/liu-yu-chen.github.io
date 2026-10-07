@@ -9,7 +9,19 @@ I'm Liu YuChen, an interdisciplinary researcher with training in sociology, publ
 
 I'm from **Changzhou, Jiangsu**, and currently based in **Zhuhai / Macao**. Outside research, I enjoy **football, travel, and music**.
 
+## Current research appointment
+
+### HKUST (Guangzhou)
+Research Assistant · Present
+
+I'm currently working as a research assistant at The Hong Kong University of Science and Technology (Guangzhou).
+
 ## Education
+
+### The Hong Kong University of Science and Technology (HKUST)
+Incoming PhD student · 2027 entry
+
+I will join HKUST as a PhD student in the 2027 cohort.
 
 ### University of Macau
 **Data Science (Precision Medicine), Faculty of Health Sciences**  

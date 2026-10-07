@@ -69,7 +69,7 @@
     "other": "Scroll to explore"
   },
   "location": {
-    "other": "Data Science · University of Macau"
+    "other": "Research Assistant · HKUST (Guangzhou)"
   },
   "roots": {
     "other": "Changzhou roots. A wider perspective."
@@ -84,7 +84,7 @@
     "other": "An interdisciplinary researcher with a background in sociology and a focus on data science, public health, and computational modeling."
   },
   "aboutIntro": {
-    "other": "I study complex health and social systems through observational data, network analysis, and agent-based models. I'm currently studying Data Science (Precision Medicine) at the University of Macau."
+    "other": "I study complex health and social systems through observational data, network analysis, and agent-based models. I'm currently a Research Assistant at HKUST (Guangzhou), studying Data Science (Precision Medicine) at the University of Macau, and an incoming PhD student at HKUST for the 2027 cohort."
   },
   "journey": {
     "other": "More about my journey"
@@ -164,6 +164,9 @@
   "degree": {
     "other": "Data Science (Precision Medicine)"
   },
+  "currentRole": {"other":"Research Assistant"},
+  "currentInstitution": {"other":"HKUST (Guangzhou)"},
+  "incomingPhD": {"other":"Incoming PhD Student · HKUST · 2027"},
   "university": {
     "other": "University of Macau"
   },
