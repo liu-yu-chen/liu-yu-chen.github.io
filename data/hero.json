@@ -1,7 +1,9 @@
 {
   "en": [
     {
-      "image": "images/hero-landscape.jpg",
+      "image": "images/hero-backiee-113602.jpg",
+      "width": 1920,
+      "height": 1080,
       "alt": "",
       "eyebrow": "RESEARCH · PEOPLE · EVERYDAY LIFE",
       "title": "Curiosity, across\ndisciplines.",
@@ -10,7 +12,9 @@
       "label": "Explore my research"
     },
     {
-      "image": "images/hero-city.jpg",
+      "image": "images/hero-shanghai.jpg",
+      "width": 2560,
+      "height": 1920,
       "alt": "",
       "eyebrow": "SOCIOLOGY → DATA SCIENCE",
       "title": "Connecting data\nwith people.",
@@ -21,7 +25,9 @@
   ],
   "zh": [
     {
-      "image": "images/hero-landscape.jpg",
+      "image": "images/hero-backiee-113602.jpg",
+      "width": 1920,
+      "height": 1080,
       "alt": "",
       "eyebrow": "研究 · 人群 · 日常生活",
       "title": "让好奇心，\n跨越学科。",
@@ -30,7 +36,9 @@
       "label": "探索我的研究"
     },
     {
-      "image": "images/hero-city.jpg",
+      "image": "images/hero-shanghai.jpg",
+      "width": 2560,
+      "height": 1920,
       "alt": "",
       "eyebrow": "从社会学，到数据科学",
       "title": "让数据，\n与人相遇。",
