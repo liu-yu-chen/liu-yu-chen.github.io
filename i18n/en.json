@@ -1,0 +1,291 @@
+{
+  "about": {
+    "other": "About"
+  },
+  "research": {
+    "other": "Research"
+  },
+  "gallery": {
+    "other": "Gallery"
+  },
+  "notes": {
+    "other": "Notes"
+  },
+  "name": {
+    "other": "Liu YuChen"
+  },
+  "homeLabel": {
+    "other": "Liu YuChen home"
+  },
+  "personalSpace": {
+    "other": "A personal space"
+  },
+  "skip": {
+    "other": "Skip to content"
+  },
+  "menu": {
+    "other": "Menu"
+  },
+  "mainNav": {
+    "other": "Main navigation"
+  },
+  "connect": {
+    "other": "Let's connect"
+  },
+  "keepInTouch": {
+    "other": "KEEP IN TOUCH"
+  },
+  "hello": {
+    "other": "Good conversations<br>start with a hello."
+  },
+  "elsewhere": {
+    "other": "Elsewhere on the internet"
+  },
+  "footerLocation": {
+    "other": "From Changzhou, Jiangsu · Based in Zhuhai / Macao"
+  },
+  "builtWith": {
+    "other": "Built with Hugo &"
+  },
+  "instagram": {
+    "other": "Instagram"
+  },
+  "xiaohongshu": {
+    "other": "Xiaohongshu"
+  },
+  "bilibili": {
+    "other": "Bilibili"
+  },
+  "linkedin": {
+    "other": "LinkedIn"
+  },
+  "heroLabel": {
+    "other": "An introduction to Liu YuChen"
+  },
+  "heroBottom": {
+    "other": "LIU YUCHEN · PERSONAL WEBSITE"
+  },
+  "scroll": {
+    "other": "Scroll to explore"
+  },
+  "location": {
+    "other": "Data Science · University of Macau"
+  },
+  "roots": {
+    "other": "Changzhou roots. A wider perspective."
+  },
+  "aboutEyebrow": {
+    "other": "01 / ABOUT ME"
+  },
+  "aboutHeading": {
+    "other": "Between people,<br>data, and possibility."
+  },
+  "aboutLead": {
+    "other": "An interdisciplinary researcher with a background in sociology and a focus on data science, public health, and computational modeling."
+  },
+  "aboutIntro": {
+    "other": "I study complex health and social systems through observational data, network analysis, and agent-based models. I'm currently studying Data Science (Precision Medicine) at the University of Macau."
+  },
+  "journey": {
+    "other": "More about my journey"
+  },
+  "publicHealth": {
+    "other": "Public health"
+  },
+  "socialScience": {
+    "other": "Computational social science"
+  },
+  "abm": {
+    "other": "Agent-based modeling"
+  },
+  "multiOmics": {
+    "other": "Multi-omics"
+  },
+  "researchEyebrow": {
+    "other": "02 / RESEARCH SHARING"
+  },
+  "researchHeading": {
+    "other": "Questions I'm working on."
+  },
+  "allResearch": {
+    "other": "All research"
+  },
+  "researchFootnote": {
+    "other": "Selected project summaries drawn from my CV. Ongoing work is labeled accordingly."
+  },
+  "beyondEyebrow": {
+    "other": "03 / BEYOND THE DESK"
+  },
+  "beyondHeading": {
+    "other": "A little more<br>than research."
+  },
+  "beyondText": {
+    "other": "Football, travel, and music. A space for the places, moments, and small things that make life interesting."
+  },
+  "visitGallery": {
+    "other": "Visit the gallery"
+  },
+  "travel": {
+    "other": "Travel"
+  },
+  "travelText": {
+    "other": "New places, new perspectives"
+  },
+  "football": {
+    "other": "Football"
+  },
+  "footballText": {
+    "other": "The beautiful game"
+  },
+  "music": {
+    "other": "Music"
+  },
+  "musicText": {
+    "other": "A soundtrack for everyday life"
+  },
+  "notesEyebrow": {
+    "other": "04 / PERSONAL NOTES"
+  },
+  "notesHeading": {
+    "other": "Room for a wandering mind."
+  },
+  "notesText": {
+    "other": "A corner for reflections on learning, research, and everyday life."
+  },
+  "visitNotes": {
+    "other": "Visit my notes"
+  },
+  "aboutPageHeading": {
+    "other": "Hi, I'm Yuchen."
+  },
+  "aboutPageDescription": {
+    "other": "From sociology to data science. Always curious about people and the systems around them."
+  },
+  "degree": {
+    "other": "Data Science (Precision Medicine)"
+  },
+  "university": {
+    "other": "University of Macau"
+  },
+  "hometown": {
+    "other": "Hometown"
+  },
+  "changzhou": {
+    "other": "Changzhou, Jiangsu"
+  },
+  "based": {
+    "other": "Based in"
+  },
+  "locationName": {
+    "other": "Zhuhai / Macao"
+  },
+  "outside": {
+    "other": "Outside research"
+  },
+  "hobbies": {
+    "other": "Football · Travel · Music"
+  },
+  "viewCV": {
+    "other": "View my CV"
+  },
+  "getInTouch": {
+    "other": "Get in touch"
+  },
+  "backResearch": {
+    "other": "Back to research"
+  },
+  "backGallery": {
+    "other": "Back to gallery"
+  },
+  "backNotes": {
+    "other": "Back to notes"
+  },
+  "source": {
+    "other": "Source: personal CV."
+  },
+  "researchSource": {
+    "other": "These summaries are based on my CV. Research in progress, completed analyses, and project experience are identified on each page; no publication or code release is implied."
+  },
+  "resultsEyebrow": {"other":"PROJECT RESULTS"},
+  "resultsHeading": {"other":"Results, at a glance."},
+  "absoluteThreshold": {"other":"Absolute r threshold"},
+  "projectSource": {"other":"Project summary based on the supplied research and course materials; methods, sample sizes, and limitations are described at the scope reported in each source."},
+  "galleryIntro": {
+    "other": "Football, travel, music, and the moments in between."
+  },
+  "photoJournal": {
+    "other": "A personal photo journal"
+  },
+  "albumBeginning": {
+    "other": "THE ALBUM IS JUST BEGINNING"
+  },
+  "memories": {
+    "other": "Memories, to be collected."
+  },
+  "noPhotos": {
+    "other": "No photos here yet. In the meantime, find me on Instagram or Xiaohongshu."
+  },
+  "notebook": {
+    "other": "AN OPEN NOTEBOOK"
+  },
+  "unwritten": {
+    "other": "The first page is still unwritten."
+  },
+  "noNotes": {
+    "other": "Thoughts on learning, research, and life will find their way here. Check back for the first note."
+  },
+  "spaceFor": {
+    "other": "A SPACE FOR"
+  },
+  "learning": {
+    "other": "Things I'm learning"
+  },
+  "questions": {
+    "other": "Questions worth asking"
+  },
+  "life": {
+    "other": "Life beyond the desk"
+  },
+  "thought": {
+    "other": "Sometimes a thought only needs a little space."
+  },
+  "rss": {
+    "other": "Subscribe via RSS"
+  },
+  "readNote": {
+    "other": "Read note"
+  },
+  "detour": {
+    "other": "404 / A SMALL DETOUR"
+  },
+  "notHere": {
+    "other": "This page isn't here."
+  },
+  "wayBack": {
+    "other": "Let's find our way back."
+  },
+  "backHome": {
+    "other": "Back to home"
+  },
+  "enlargePhoto": {
+    "other": "Enlarge photo"
+  },
+  "photoViewer": {
+    "other": "Photo viewer"
+  },
+  "close": {
+    "other": "Close"
+  },
+  "prevSlide": {
+    "other": "Previous introduction"
+  },
+  "nextSlide": {
+    "other": "Next introduction"
+  },
+  "slideLabel": {
+    "other": "Introduction %s"
+  },
+  "pageLabel": {
+    "other": "Go to introduction %s"
+  }
+}

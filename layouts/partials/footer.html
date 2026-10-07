@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <div class="container footer-top"><div><p class="eyebrow">{{ i18n "keepInTouch" }}</p><h2>{{ i18n "hello" | safeHTML }}</h2><a class="email-link" href="mailto:{{ site.Params.email }}">{{ site.Params.email }} <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-social"><p>{{ i18n "elsewhere" }}</p>{{ range site.Data.social }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ i18n .key }} <span aria-hidden="true">↗</span></a>{{ end }}</div>
+  </div>
+  <div class="container footer-bottom"><span>© {{ now.Year }} {{ i18n "name" }}</span><span>{{ i18n "footerLocation" }}</span><span>{{ i18n "builtWith" }} <a href="https://github.com/opera7133/tella" target="_blank" rel="noopener noreferrer">Tella</a></span></div>
+</footer>

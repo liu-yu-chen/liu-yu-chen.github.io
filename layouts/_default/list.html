@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-heading container"><p class="eyebrow">{{ .Params.eyebrow }}</p><h1>{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></section>
+{{ if eq .Section "research" }}
+<section class="container section-content"><div class="research-grid">{{ range .RegularPages.ByWeight }}{{ partial "research-card.html" . }}{{ end }}</div><div class="source-note">{{ i18n "researchSource" }}</div></section>
+{{ else if eq .Section "gallery" }}
+<section class="container section-content"><div class="gallery-intro"><p>{{ i18n "galleryIntro" }}</p><span class="small-label">{{ i18n "photoJournal" }}</span></div>
+{{ if .RegularPages }}<div class="gallery-grid">{{ range .RegularPages.ByDate.Reverse }}{{ $album := . }}<article class="gallery-card"><a href="{{ .RelPermalink }}">{{ with .Params.cover }}<img src="{{ . | relURL }}" alt="{{ $album.Title }}" loading="lazy">{{ end }}<h2>{{ .Title }}</h2><p>{{ .Description }}</p></a></article>{{ end }}</div>
+{{ else }}<div class="gallery-empty"><img src="{{ "images/travel.svg" | relURL }}" alt="" width="240" height="180"><p class="eyebrow">{{ i18n "albumBeginning" }}</p><h2>{{ i18n "memories" }}</h2><p>{{ i18n "noPhotos" }}</p><div class="empty-actions"><a class="button button-dark" href="{{ (index site.Data.social 0).url }}" target="_blank" rel="noopener noreferrer">{{ i18n "instagram" }} ↗</a><a class="text-link" href="{{ (index site.Data.social 1).url }}" target="_blank" rel="noopener noreferrer">{{ i18n "xiaohongshu" }} ↗</a></div></div>{{ end }}</section>
+{{ else }}
+<section class="container section-content notes-layout"><div>{{ if .RegularPages }}{{ range .RegularPages.ByDate.Reverse }}<article class="note-row"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Description }}</p><a class="text-link" href="{{ .RelPermalink }}">{{ i18n "readNote" }} ↗</a></article>{{ end }}{{ else }}<div class="notes-empty"><span class="pen-mark" aria-hidden="true">✎</span><p class="eyebrow">{{ i18n "notebook" }}</p><h2>{{ i18n "unwritten" }}</h2><p>{{ i18n "noNotes" }}</p></div>{{ end }}</div><aside class="notes-aside"><p class="eyebrow">{{ i18n "spaceFor" }}</p><ul><li>{{ i18n "learning" }}</li><li>{{ i18n "questions" }}</li><li>{{ i18n "life" }}</li></ul><p>{{ i18n "thought" }}</p><a class="text-link" href="{{ "notes/index.xml" | relLangURL }}">{{ i18n "rss" }} ↗</a></aside></section>
+{{ end }}
+{{ end }}

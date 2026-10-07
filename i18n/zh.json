@@ -1,0 +1,291 @@
+{
+  "about": {
+    "other": "个人介绍"
+  },
+  "research": {
+    "other": "研究分享"
+  },
+  "gallery": {
+    "other": "相册"
+  },
+  "notes": {
+    "other": "随心感想"
+  },
+  "name": {
+    "other": "刘雨辰"
+  },
+  "homeLabel": {
+    "other": "刘雨辰 · 首页"
+  },
+  "personalSpace": {
+    "other": "个人空间"
+  },
+  "skip": {
+    "other": "跳至正文"
+  },
+  "menu": {
+    "other": "菜单"
+  },
+  "mainNav": {
+    "other": "主导航"
+  },
+  "connect": {
+    "other": "联系我"
+  },
+  "keepInTouch": {
+    "other": "保持联系"
+  },
+  "hello": {
+    "other": "聊一聊，<br>从一句你好开始。"
+  },
+  "elsewhere": {
+    "other": "在其他地方找到我"
+  },
+  "footerLocation": {
+    "other": "来自江苏常州 · 现居珠海 / 澳门"
+  },
+  "builtWith": {
+    "other": "基于 Hugo 与"
+  },
+  "instagram": {
+    "other": "Instagram"
+  },
+  "xiaohongshu": {
+    "other": "小红书"
+  },
+  "bilibili": {
+    "other": "哔哩哔哩"
+  },
+  "linkedin": {
+    "other": "领英"
+  },
+  "heroLabel": {
+    "other": "认识刘雨辰"
+  },
+  "heroBottom": {
+    "other": "刘雨辰 · 个人网站"
+  },
+  "scroll": {
+    "other": "向下探索"
+  },
+  "location": {
+    "other": "澳门大学 · 数据科学"
+  },
+  "roots": {
+    "other": "从常州出发，保持开阔的视野。"
+  },
+  "aboutEyebrow": {
+    "other": "01 / 个人介绍"
+  },
+  "aboutHeading": {
+    "other": "在人、数据与<br>可能性之间。"
+  },
+  "aboutLead": {
+    "other": "拥有社会学背景的跨学科研究者，关注数据科学、公共卫生与计算建模。"
+  },
+  "aboutIntro": {
+    "other": "通过观察性数据、网络分析与主体建模，探索复杂的健康和社会系统。目前就读于澳门大学数据科学（精准医学）专业。"
+  },
+  "journey": {
+    "other": "了解我的经历"
+  },
+  "publicHealth": {
+    "other": "公共卫生"
+  },
+  "socialScience": {
+    "other": "计算社会科学"
+  },
+  "abm": {
+    "other": "主体建模"
+  },
+  "multiOmics": {
+    "other": "多组学"
+  },
+  "researchEyebrow": {
+    "other": "02 / 研究分享"
+  },
+  "researchHeading": {
+    "other": "正在探索的问题。"
+  },
+  "allResearch": {
+    "other": "查看全部研究"
+  },
+  "researchFootnote": {
+    "other": "根据个人简历整理的研究与项目概览，进行中的工作已明确标注。"
+  },
+  "beyondEyebrow": {
+    "other": "03 / 研究之外"
+  },
+  "beyondHeading": {
+    "other": "生活，不止<br>于研究。"
+  },
+  "beyondText": {
+    "other": "足球、旅行、音乐。在这里，留住那些让生活变得有趣的地方、瞬间与小事。"
+  },
+  "visitGallery": {
+    "other": "走进相册"
+  },
+  "travel": {
+    "other": "旅行"
+  },
+  "travelText": {
+    "other": "新的地方，新的视角"
+  },
+  "football": {
+    "other": "足球"
+  },
+  "footballText": {
+    "other": "绿茵场上的热爱"
+  },
+  "music": {
+    "other": "音乐"
+  },
+  "musicText": {
+    "other": "为日常配上一段旋律"
+  },
+  "notesEyebrow": {
+    "other": "04 / 随心感想"
+  },
+  "notesHeading": {
+    "other": "给思绪，一点空间。"
+  },
+  "notesText": {
+    "other": "一处角落，收纳关于学习、研究与日常生活的感想。"
+  },
+  "visitNotes": {
+    "other": "翻开随心感想"
+  },
+  "aboutPageHeading": {
+    "other": "你好，我是刘雨辰。"
+  },
+  "aboutPageDescription": {
+    "other": "从社会学到数据科学，始终对人与周围的系统保持好奇。"
+  },
+  "degree": {
+    "other": "数据科学（精准医学）"
+  },
+  "university": {
+    "other": "澳门大学"
+  },
+  "hometown": {
+    "other": "家乡"
+  },
+  "changzhou": {
+    "other": "江苏省常州市"
+  },
+  "based": {
+    "other": "现居"
+  },
+  "locationName": {
+    "other": "珠海 / 澳门"
+  },
+  "outside": {
+    "other": "研究之外"
+  },
+  "hobbies": {
+    "other": "足球 · 旅行 · 音乐"
+  },
+  "viewCV": {
+    "other": "查看我的简历"
+  },
+  "getInTouch": {
+    "other": "联系我"
+  },
+  "backResearch": {
+    "other": "返回研究分享"
+  },
+  "backGallery": {
+    "other": "返回相册"
+  },
+  "backNotes": {
+    "other": "返回随心感想"
+  },
+  "source": {
+    "other": "来源：个人简历。本页是项目摘要，不代表已经发表同行评议论文。"
+  },
+  "researchSource": {
+    "other": "本页根据个人简历整理。各详情页明确区分进行中的研究、已有分析与项目经历，不代表论文或代码已公开发布。"
+  },
+  "resultsEyebrow": {"other":"项目分析结果"},
+  "resultsHeading": {"other":"一图看懂分析结果"},
+  "absoluteThreshold": {"other":"绝对相关阈值"},
+  "projectSource": {"other":"项目摘要依据所提供的研究与课程材料整理。方法、样本数和局限均按各原始材料所报告的范围说明。"},
+  "galleryIntro": {
+    "other": "足球、旅行、音乐，以及生活中的小小瞬间。"
+  },
+  "photoJournal": {
+    "other": "我的影像日记"
+  },
+  "albumBeginning": {
+    "other": "相册，刚刚开始"
+  },
+  "memories": {
+    "other": "等待被收藏的时刻。"
+  },
+  "noPhotos": {
+    "other": "这里还没有照片。也可以先在 Instagram 或小红书找到我。"
+  },
+  "notebook": {
+    "other": "一本打开的笔记"
+  },
+  "unwritten": {
+    "other": "第一篇，留待慢慢写下。"
+  },
+  "noNotes": {
+    "other": "关于学习、研究与生活的思绪，将慢慢来到这里。期待与你分享第一篇感想。"
+  },
+  "spaceFor": {
+    "other": "这里会记录"
+  },
+  "learning": {
+    "other": "正在学习的事"
+  },
+  "questions": {
+    "other": "值得追问的问题"
+  },
+  "life": {
+    "other": "书桌之外的生活"
+  },
+  "thought": {
+    "other": "有时，一个念头只需要一点空间。"
+  },
+  "rss": {
+    "other": "通过 RSS 订阅"
+  },
+  "readNote": {
+    "other": "阅读感想"
+  },
+  "detour": {
+    "other": "404 / 暂时迷路了"
+  },
+  "notHere": {
+    "other": "这个页面还不在这里。"
+  },
+  "wayBack": {
+    "other": "一起回到首页看看。"
+  },
+  "backHome": {
+    "other": "返回首页"
+  },
+  "enlargePhoto": {
+    "other": "查看大图"
+  },
+  "photoViewer": {
+    "other": "照片查看器"
+  },
+  "close": {
+    "other": "关闭"
+  },
+  "prevSlide": {
+    "other": "上一页介绍"
+  },
+  "nextSlide": {
+    "other": "下一页介绍"
+  },
+  "slideLabel": {
+    "other": "第 %s 页介绍"
+  },
+  "pageLabel": {
+    "other": "跳至第 %s 页介绍"
+  }
+}

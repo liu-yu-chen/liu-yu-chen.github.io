@@ -1,0 +1,61 @@
+{{ $project := . }}
+{{ $charts := index site.Data.research_charts .Params.chart }}
+<section class="research-results" aria-labelledby="results-heading">
+  <p class="eyebrow">{{ i18n "resultsEyebrow" }}</p>
+  <h2 id="results-heading">{{ i18n "resultsHeading" }}</h2>
+  <figure class="results-figure" aria-label="{{ .Params.figureAlt }}"><figcaption>{{ .Params.figureCaption }}</figcaption>
+    <div class="result-panel-grid">
+    {{ range $charts.panels }}
+      {{ $panel := . }}
+      <section class="result-panel" aria-label="{{ index .title site.Language.Lang }}">
+        <h3>{{ index .title site.Language.Lang }}</h3>
+        <p class="result-subtitle">{{ index .subtitle site.Language.Lang }}</p>
+        {{ if eq .type "diverging" }}
+          <div class="diverging-chart" aria-label="{{ index .title site.Language.Lang }}">
+            <div class="correlation-rows">
+              {{ range .rows }}
+                {{ $width := math.Abs .value | math.Div $panel.max | math.Mul 47 }}
+                <div class="correlation-row"><span class="correlation-label">{{ index .label site.Language.Lang }}</span><span class="correlation-track"><span class="correlation-zero"></span><span class="correlation-bar {{ if lt .value 0 }}negative{{ else }}positive{{ end }}" style="{{ if lt .value 0 }}left:calc(50% - {{ printf "%.2f" $width }}%){{ else }}left:50%{{ end }};width:{{ printf "%.2f" $width }}%"></span></span><span class="correlation-value">{{ .display }}</span></div>
+              {{ end }}
+            </div>
+            <div class="correlation-axis">{{ range .ticks }}<span style="left:{{ .pos }}%">{{ .value }}</span>{{ end }}</div>
+          </div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "thresholds" }}
+          <div class="threshold-chart">
+            <div class="threshold-header"><span>{{ i18n "absoluteThreshold" }}</span>{{ range .thresholds }}<span>{{ . }}</span>{{ end }}</div>
+            {{ range .series }}
+              {{ $series := . }}
+              <div class="threshold-row"><span class="threshold-label {{ .kind }}">{{ index .label site.Language.Lang }}</span>{{ range .values }}{{ $width := math.Div (float .) $panel.max | math.Mul 100 }}<span class="threshold-count"><span class="threshold-track"><span class="threshold-fill {{ $series.kind }}" style="width:{{ printf "%.2f" $width }}%"></span></span><b>{{ . }}</b></span>{{ end }}</div>
+            {{ end }}
+          </div>
+          <p class="result-note">{{ index .subtitle site.Language.Lang }}</p>
+        {{ else if eq .type "trend" }}
+          <div class="trend-chart" aria-label="{{ index .title site.Language.Lang }}">
+            {{ range .points }}{{ $height := math.Div .value $panel.max | math.Mul 100 }}<div class="trend-column"><b>{{ .display }}</b><span class="trend-track"><i style="height:{{ printf "%.2f" $height }}%"></i></span><strong>{{ .label }}</strong><small>n = {{ .count }}</small></div>{{ end }}
+          </div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "stacked" }}
+          <div class="stacked-chart" aria-label="{{ index .title site.Language.Lang }}">
+            <div class="stacked-track">{{ range .segments }}{{ $seg := . }}<span class="stacked-segment {{ if eq $seg.percent 50.0 }}major{{ end }}" style="width:{{ $seg.percent }}%"><b>{{ $seg.display }}</b></span>{{ end }}</div>
+            <div class="stacked-legend">{{ range .segments }}<span><i class="legend-swatch {{ if eq .percent 50.0 }}major{{ else if eq .percent 59.6 }}major{{ else }}minor{{ end }}"></i><span>{{ index .label site.Language.Lang }} <b>{{ .value }}</b></span></span>{{ end }}</div>
+            <p class="stacked-total">n = {{ .total }}</p>
+          </div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "funnel" }}
+          <ol class="funnel-chart">{{ range .stages }}<li class="funnel-stage"><span class="funnel-count">{{ .count }}</span><span class="funnel-label">{{ index .label site.Language.Lang }}</span></li>{{ end }}</ol>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "cohorts" }}
+          <div class="cohort-grid">{{ range .cards }}<div class="cohort-card"><b>{{ .value }}</b><span>{{ index .label site.Language.Lang }}</span><small>{{ index .detail site.Language.Lang }}</small></div>{{ end }}</div>
+        {{ else if eq .type "bars" }}
+          <div class="bar-chart" aria-label="{{ index .title site.Language.Lang }}">{{ range .rows }}{{ $width := math.Div .value $panel.max | math.Mul 100 }}<div class="bar-row"><span>{{ index .label site.Language.Lang }}</span><span class="bar-track"><i style="width:{{ printf "%.2f" $width }}%"></i></span><b>{{ .display }}</b></div>{{ end }}</div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ else if eq .type "importance" }}
+          <div class="bar-chart importance-chart" aria-label="{{ index .title site.Language.Lang }}">{{ range .rows }}{{ $width := math.Div .value $panel.max | math.Mul 100 }}<div class="bar-row"><span>{{ index .label site.Language.Lang }}</span><span class="bar-track"><i style="width:{{ printf "%.2f" $width }}%"></i></span><b>{{ .display }}</b></div>{{ end }}</div>
+          <p class="result-note">{{ index .note site.Language.Lang }}</p>
+        {{ end }}
+      </section>
+    {{ end }}
+    </div>
+  </figure>
+</section>

@@ -1,0 +1,6 @@
+/public/
+/resources/
+/.hugo_build.lock
+/delivery/
+/tmp/
+/node_modules/

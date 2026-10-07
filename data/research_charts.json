@@ -1,0 +1,137 @@
+{
+  "lifestyle": {
+    "panels": [
+      {
+        "type": "diverging",
+        "title": {"en": "Ten largest direct SDS-score associations", "zh": "与 SDS 得分直接关联最大的十项"},
+        "subtitle": {"en": "Full-sample partial correlation; 36-node network (n = 105,138).", "zh": "全样本偏相关；36 节点网络（n = 105,138）。"},
+        "min": -0.14, "max": 0.14,
+        "ticks": [{"value":"−0.14","pos":0},{"value":"0","pos":50},{"value":"+0.14","pos":100}],
+        "rows": [
+          {"label":{"en":"Secondhand-smoke exposure duration","zh":"二手烟暴露时间"},"value":-0.125,"display":"−0.125"},
+          {"label":{"en":"Health insurance","zh":"医疗保险"},"value":-0.108,"display":"−0.108"},
+          {"label":{"en":"Education","zh":"受教育程度"},"value":-0.088,"display":"−0.088"},
+          {"label":{"en":"Sleep latency","zh":"入睡潜伏时间"},"value":0.077,"display":"+0.077"},
+          {"label":{"en":"Sugary-drink intake category","zh":"含糖饮料摄入类别"},"value":0.068,"display":"+0.068"},
+          {"label":{"en":"Sleep-medication frequency","zh":"助眠药使用频率"},"value":0.067,"display":"+0.067"},
+          {"label":{"en":"Daily work hours","zh":"每日工作时长"},"value":-0.066,"display":"−0.066"},
+          {"label":{"en":"Sleep duration","zh":"睡眠时长"},"value":-0.059,"display":"−0.059"},
+          {"label":{"en":"Daytime sleepiness","zh":"日间嗜睡"},"value":-0.056,"display":"−0.056"},
+          {"label":{"en":"Commute time","zh":"通勤时长"},"value":0.049,"display":"+0.049"}
+        ],
+        "note": {"en":"A positive value means a higher recorded variable code co-occurs with a higher SDS score, conditional on the other modeled nodes. It does not establish causation or protection.","zh":"正值表示该问卷变量的记录编码较高时，与更高的 SDS 得分条件共现；这不代表因果关系或保护作用。"}
+      },
+      {
+        "type": "thresholds",
+        "title": {"en":"How the plotting threshold changes the displayed network","zh":"绘图阈值如何改变网络展示"},
+        "subtitle": {"en":"An absolute partial-correlation display cutoff, not a statistical-significance test.","zh":"绝对偏相关展示阈值，不是统计显著性检验。"},
+        "max": 130,
+        "series": [
+          {"label":{"en":"All displayed edges","zh":"网络展示连边"},"kind":"all","values":[130,107,87,62]},
+          {"label":{"en":"Direct SDS edges","zh":"SDS 得分直接连边"},"kind":"direct","values":[15,13,9,7]},
+          {"label":{"en":"Stable SDS edges","zh":"稳定的 SDS 连边"},"kind":"stable","values":[14,12,8,7]}
+        ],
+        "thresholds":["0.03","0.04","0.05","0.06"]
+      }
+    ]
+  },
+  "abm": {
+    "panels": [
+      {
+        "type":"trend",
+        "title":{"en":"LLM adoption in ABM publications","zh":"主体建模论文中的大语言模型应用"},
+        "subtitle":{"en":"Share of papers in the supplied corpus; annual classified-paper counts are shown below.","zh":"提供语料中的年度论文比例；下方同时列出每年分类到的论文数。"},
+        "min":0,"max":6,"unit":"%",
+        "points":[{"label":"2023","value":1.50,"display":"1.50%","count":32},{"label":"2024","value":2.75,"display":"2.75%","count":63},{"label":"2025","value":5.65,"display":"5.65%","count":141}],
+        "note":{"en":"Cochran–Armitage trend p < 0.001. This corpus covers the early 2023–2025 diffusion window.","zh":"Cochran–Armitage 趋势检验 p < 0.001。该语料只覆盖 2023–2025 年的早期扩散阶段。"}
+      },
+      {
+        "type":"stacked",
+        "title":{"en":"What LLMs do in classified ABM papers","zh":"可分类用途的论文中，大语言模型承担什么角色"},
+        "subtitle":{"en":"Role classifiable in 235 papers, out of 236 identified LLM papers.","zh":"236 篇识别到的大语言模型相关论文中，235 篇可分类其用途。"},
+        "total":235,
+        "segments":[
+          {"label":{"en":"Agent behavior or decisions","zh":"主体行为或决策"},"value":140,"percent":59.6,"display":"59.6%"},
+          {"label":{"en":"Supporting tasks","zh":"支持性工作"},"value":95,"percent":40.4,"display":"40.4%"}
+        ],
+        "note":{"en":"A supporting role includes implementation, data, analysis, or interfaces. One additional paper's role was not classifiable.","zh":"支持性工作包括实现、数据、分析或界面。另有一篇论文的用途无法分类。"}
+      }
+    ]
+  },
+  "gastric": {
+    "panels":[
+      {
+        "type":"funnel",
+        "title":{"en":"From shared expression signals to the final MR plot","zh":"从共享表达信号到最终 MR 图"},
+        "subtitle":{"en":"The supplied report's gene counts at each filtering stage.","zh":"提供报告中各筛选阶段的基因数量。"},
+        "stages":[
+          {"count":"581","label":{"en":"WGCNA hub genes shared across datasets","zh":"两个数据集共有的 WGCNA 枢纽基因"}},
+          {"count":"58","label":{"en":"Random Forest features","zh":"随机森林特征"}},
+          {"count":"14","label":{"en":"LASSO candidates","zh":"LASSO 候选基因"}},
+          {"count":"8","label":{"en":"Eligible for cis-eQTL follow-up","zh":"符合 cis-eQTL 后续筛查条件"}},
+          {"count":"6","label":{"en":"Passed instrument screening","zh":"通过工具变量筛选"}},
+          {"count":"4","label":{"en":"Shown in the final MR plot","zh":"最终 MR 图展示"}}
+        ],
+        "note":{"en":"None of the four gene associations in the report's final MR results reached statistical significance.","zh":"报告最终 MR 结果中的 4 个基因关联均未达到统计学显著性。"}
+      }
+    ]
+  },
+  "cervical": {
+    "panels":[
+      {
+        "type":"cohorts",
+        "title":{"en":"Two data tables, different denominators","zh":"两份数据表，分母各不相同"},
+        "subtitle":{"en":"Expression samples and clinical follow-up are separate analyses.","zh":"表达样本与临床随访属于不同的分析表。"},
+        "cards":[
+          {"value":"328","label":{"en":"expression samples","zh":"表达样本"},"detail":{"en":"309 tumor · 19 normal","zh":"309 肿瘤 · 19 正常"}},
+          {"value":"14,794","label":{"en":"retained genes","zh":"保留基因"},"detail":{"en":"~16:1 tumor-to-normal ratio","zh":"肿瘤与正常样本约 16:1"}},
+          {"value":"312","label":{"en":"clinical survival records","zh":"临床生存记录"},"detail":{"en":"separate clinical table","zh":"独立临床数据表"}},
+          {"value":"178","label":{"en":"DFI follow-up records","zh":"DFI 随访记录"},"detail":{"en":"partial outcome coverage","zh":"部分结局数据缺失"}}
+        ]
+      },
+      {
+        "type":"bars",
+        "title":{"en":"Reported clinical outcome event rates","zh":"报告中的临床结局事件比例"},
+        "subtitle":{"en":"Descriptive rates in the clinical table; the report gives a smaller analyzable sample for DFI.","zh":"临床数据表中的描述性比例；报告显示 DFI 的可分析样本较少。"},
+        "max":25,
+        "rows":[
+          {"label":{"en":"Overall survival (OS)","zh":"总生存期（OS）"},"value":23.4,"display":"23.4%"},
+          {"label":{"en":"Disease-specific survival (DSS)","zh":"疾病特异性生存期（DSS）"},"value":18.2,"display":"18.2%"},
+          {"label":{"en":"Disease-free interval (DFI)","zh":"无病间期（DFI）"},"value":15.2,"display":"15.2%"},
+          {"label":{"en":"Progression-free interval (PFI)","zh":"无进展间期（PFI）"},"value":23.4,"display":"23.4%"}
+        ],
+        "note":{"en":"Event rates are not independent treatment effects, a prospective risk estimate, or external validation.","zh":"事件比例不是独立治疗效果、前瞻性风险估计或外部验证。"}
+      }
+    ]
+  },
+  "ev": {
+    "panels":[
+      {
+        "type":"importance",
+        "title":{"en":"Reported random-forest feature importance","zh":"报告中的随机森林特征重要性"},
+        "subtitle":{"en":"Importance scores from the fitted purchase-intention model (survey n = 368).","zh":"购车意愿模型所报告的特征重要性（问卷 n = 368）。"},
+        "max":0.30,
+        "rows":[
+          {"label":{"en":"Occupation","zh":"职业"},"value":0.297,"display":"0.297"},
+          {"label":{"en":"Income","zh":"收入"},"value":0.272,"display":"0.272"},
+          {"label":{"en":"Education","zh":"学历"},"value":0.172,"display":"0.172"},
+          {"label":{"en":"Age","zh":"年龄"},"value":0.166,"display":"0.166"},
+          {"label":{"en":"Gender","zh":"性别"},"value":0.091,"display":"0.091"}
+        ],
+        "note":{"en":"Model importance is descriptive; it does not show causal effects or population purchase probabilities.","zh":"模型重要性是描述性指标，不表示因果关系或总体购车概率。"}
+      },
+      {
+        "type":"stacked",
+        "title":{"en":"Sentiment classification of online comments","zh":"线上评论的情感分类"},
+        "subtitle":{"en":"8,058 classified comments; separate from the 368-person survey.","zh":"8,058 条已分类评论，与 368 人问卷属于不同数据来源。"},
+        "total":8058,
+        "segments":[
+          {"label":{"en":"Positive","zh":"正面"},"value":4027,"percent":50,"display":"50.0%"},
+          {"label":{"en":"Neutral","zh":"中立"},"value":1950,"percent":24.2,"display":"24.2%"},
+          {"label":{"en":"Negative","zh":"负面"},"value":2081,"percent":25.8,"display":"25.8%"}
+        ],
+        "note":{"en":"Comment sentiment is not an estimate of sentiment among all Xiamen residents.","zh":"评论情感比例并非厦门全体居民情感的估计。"}
+      }
+    ]
+  }
+}

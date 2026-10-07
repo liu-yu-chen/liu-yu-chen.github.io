@@ -1,0 +1,42 @@
+{
+  "en": [
+    {
+      "image": "images/hero-landscape.jpg",
+      "alt": "",
+      "eyebrow": "RESEARCH · PEOPLE · EVERYDAY LIFE",
+      "title": "Curiosity, across\ndisciplines.",
+      "text": "I'm Liu YuChen. I explore how data and computational models can help us understand complex health and social systems.",
+      "link": "research/",
+      "label": "Explore my research"
+    },
+    {
+      "image": "images/hero-city.jpg",
+      "alt": "",
+      "eyebrow": "SOCIOLOGY → DATA SCIENCE",
+      "title": "Connecting data\nwith people.",
+      "text": "From sociology to precision medicine, my work brings empirical evidence, network science, and agent-based modeling into conversation.",
+      "link": "about/",
+      "label": "A little about me"
+    }
+  ],
+  "zh": [
+    {
+      "image": "images/hero-landscape.jpg",
+      "alt": "",
+      "eyebrow": "研究 · 人群 · 日常生活",
+      "title": "让好奇心，\n跨越学科。",
+      "text": "你好，我是刘雨辰。用数据与计算模型，探索复杂的健康和社会系统。",
+      "link": "research/",
+      "label": "探索我的研究"
+    },
+    {
+      "image": "images/hero-city.jpg",
+      "alt": "",
+      "eyebrow": "从社会学，到数据科学",
+      "title": "让数据，\n与人相遇。",
+      "text": "从社会学走向精准医学，将经验证据、网络科学与主体建模结合，理解人与系统之间的联系。",
+      "link": "about/",
+      "label": "认识一下我"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Instagram",
+    "label": "IG",
+    "url": "https://www.instagram.com/yuchen_liu_mason/",
+    "key": "instagram"
+  },
+  {
+    "name": "Xiaohongshu",
+    "label": "RED",
+    "url": "https://www.xiaohongshu.com/user/profile/5be6e77d9bd70e000149accb",
+    "key": "xiaohongshu"
+  },
+  {
+    "name": "Bilibili",
+    "label": "BILI",
+    "url": "https://space.bilibili.com/3546883802794071?spm_id_from=333.1007.0.0",
+    "key": "bilibili"
+  },
+  {
+    "name": "LinkedIn",
+    "label": "IN",
+    "url": "https://www.linkedin.com/in/yuchen-liu-7b8a36379/",
+    "key": "linkedin"
+  }
+]

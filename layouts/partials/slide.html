@@ -1,0 +1,10 @@
+{{/* Adapted from Tella's Splide hero. Template imagery is decorative. */}}
+<section class="hero splide" aria-label="{{ i18n "heroLabel" }}">
+  <div class="splide__track"><ul class="splide__list">
+    {{ range (index site.Data.hero site.Language.Lang) }}<li class="splide__slide">
+      <img class="hero-image" src="{{ .image | relURL }}" alt="{{ .alt }}" fetchpriority="{{ if eq .link "research/" }}high{{ else }}low{{ end }}" width="1800" height="1200">
+      <div class="hero-shade"></div><div class="container hero-content"><p class="eyebrow">{{ .eyebrow }}</p><h1>{{ .title }}</h1><p class="hero-text">{{ .text }}</p><a class="button button-light" href="{{ .link | relLangURL }}">{{ .label }} <span aria-hidden="true">↗</span></a></div>
+    </li>{{ end }}
+  </ul></div>
+  <div class="hero-bottom container"><span>{{ i18n "heroBottom" }}</span><a href="#introduction">{{ i18n "scroll" }} <span aria-hidden="true">↓</span></a></div>
+</section>

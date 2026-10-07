@@ -1,0 +1,4 @@
+<article class="research-card">
+  <a class="research-visual visual-{{ .Params.visual | default "network" }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}"><img src="{{ printf "images/%s.svg" (.Params.visual | default "network") | relURL }}" alt="" loading="lazy" width="640" height="360"><span class="card-arrow" aria-hidden="true">↗</span></a>
+  <div class="card-body"><p class="eyebrow">{{ .Params.category }}</p><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Description }}</p><div class="card-meta"><span>{{ .Params.status }}</span><span>{{ .Params.period }}</span></div></div>
+</article>
