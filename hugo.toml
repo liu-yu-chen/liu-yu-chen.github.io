@@ -9,7 +9,7 @@ enableRobotsTXT = true
 summaryLength = 30
 
 [params]
-  description = 'Liu YuChen — exploring health and social systems through data, network science, and agent-based modeling.'
+  description = 'Liu YuChen — connecting data science, health sciences, and social sciences through interdisciplinary research.'
   email = 'yuchen.liu@connect.um.edu.mo'
 
 [languages.en]
@@ -19,7 +19,7 @@ summaryLength = 30
   weight = 1
   title = 'Liu YuChen'
 [languages.en.params]
-  description = 'Liu YuChen — exploring health and social systems through data, network science, and agent-based modeling.'
+  description = 'Liu YuChen — connecting data science, health sciences, and social sciences through interdisciplinary research.'
 [languages.zh]
   languageName = '中文'
   languageCode = 'zh-cn'
@@ -27,7 +27,7 @@ summaryLength = 30
   weight = 2
   title = '刘雨辰'
 [languages.zh.params]
-  description = '刘雨辰的个人网站：用数据、网络科学与主体建模探索健康和社会系统，分享研究与生活。'
+  description = '刘雨辰的个人网站：结合数据科学、健康科学与社会科学，分享跨学科研究、项目与生活。'
 
 [[menus.main]]
   name = 'About'
@@ -40,15 +40,20 @@ summaryLength = 30
   identifier = 'research'
   weight = 2
 [[menus.main]]
+  name = 'Projects'
+  pageRef = '/projects'
+  identifier = 'projects'
+  weight = 3
+[[menus.main]]
   name = 'Gallery'
   pageRef = '/gallery'
   identifier = 'gallery'
-  weight = 3
+  weight = 4
 [[menus.main]]
   name = 'Notes'
   pageRef = '/notes'
   identifier = 'notes'
-  weight = 4
+  weight = 5
 
 [markup.goldmark.renderer]
   unsafe = false

@@ -28,6 +28,14 @@ The manuscript analyzes 105,138 cleaned respondent records. The 36-node network 
 
 Records without an SDS score were excluded. Remaining missing variables were median-filled in network preparation. A separate upstream issue concerns secondhand smoke: only 29,928 respondents had an observed source value; 75,210 values had been filled by random-forest iterative imputation. This is important when interpreting that edge.
 
+## Methods linked to findings
+
+| Data science method | Corresponding finding | Interpretation boundary |
+| --- | --- | --- |
+| Ledoit–Wolf partial correlations | 36 nodes; 107 displayed edges; 13 direct SDS links at |r| ≥ 0.04. | Conditional associations, not intervention effects. |
+| 60/40 discovery–holdout check | All 13 selected links retain direction; 12 exceed the display threshold in holdout. | Internal repeatability within the same survey. |
+| Bootstrap simultaneous bands | 4 sex-related and 1/3/1 age-contrast edge differences; none is a direct SDS edge. | No resolved SDS-edge difference under this criterion. |
+
 ## Analytical methods {#research-methods}
 
 1. Standardize variables within each analysis sample, estimate a Ledoit–Wolf shrinkage covariance matrix, and convert its inverse into partial correlations. Each edge describes a linear association conditional on the other modeled variables.

@@ -1,5 +1,5 @@
 +++
 title = 'Research, in practice.'
 eyebrow = '02 / RESEARCH SHARING'
-description = 'Five projects at the intersection of public health, computational social science, biomedical data analysis, and consumer research.'
+description = 'Data science methods linked to findings across computational social science, complex networks, LLM and NLP applications, and biostatistics and public health.'
 +++

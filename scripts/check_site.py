@@ -12,13 +12,15 @@ output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root / 'public'
 class Document(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
-        self.links=[]; self.ids=set(); self.lang=None; self.translation=None; self.h1=0; self.text=[]; self.prose_text=[]; self.in_prose=0
+        self.links=[]; self.ids=set(); self.lang=None; self.translation=None; self.h1=0; self.text=[]; self.prose_text=[]; self.in_prose=0; self.in_main_nav=False; self.navigation=[]
         self.feed(text)
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
         if tag == 'div' and (self.in_prose or 'prose' in attrs.get('class','').split()): self.in_prose += 1
         if 'id' in attrs: self.ids.add(attrs['id'])
         if tag == 'html': self.lang=attrs.get('lang')
+        if tag == 'nav' and attrs.get('id')=='main-nav': self.in_main_nav=True
+        if tag == 'a' and self.in_main_nav and not attrs.get('href','').startswith('mailto:'): self.navigation.append(attrs.get('href',''))
         if tag == 'h1': self.h1 += 1
         if tag == 'a' and 'language-switch' in attrs.get('class',''): self.translation=attrs.get('href')
         for attribute in ('href','src'):
@@ -28,6 +30,7 @@ class Document(HTMLParser):
         if self.in_prose: self.prose_text.append(data)
     def handle_endtag(self, tag):
         if tag == 'div' and self.in_prose: self.in_prose -= 1
+        if tag == 'nav': self.in_main_nav=False
 
 files=list(output.rglob('*.html'))
 documents={p:Document(p.read_text(encoding='utf-8')) for p in files}
@@ -67,6 +70,9 @@ for path,doc in documents.items():
     if '**' in ''.join(doc.prose_text): errors.append(f'{path}: unrendered Markdown emphasis')
     if 'Liu YuChen' not in ''.join(doc.text) or 'LYC' not in ''.join(doc.text): errors.append(f'{path}: incorrect brand')
     if path.name != '404.html' and not doc.translation: errors.append(f'{path}: missing language switch')
+    lang_path='zh/' if doc.lang=='zh-cn' else ''
+    expected_nav=[f'{prefix}/{lang_path}{section}/' for section in ('about','research','projects','gallery','notes')]
+    if doc.navigation!=expected_nav: errors.append(f'{path}: incorrect five-section language navigation')
     for tag,url,attrs in doc.links:
         if not url: errors.append(f'{path}: empty URL'); continue
         if tag=='link' and attrs.get('rel') in ('canonical','alternate'): continue
@@ -83,12 +89,21 @@ for css in referenced_css:
     for url in re.findall(r'url\(["\']?([^\)"\']+)',css.read_text(encoding='utf-8')):
         resolve(url,css); count+=1
 research_routes=('lifestyle-networks','literature-intelligence','gastric-gist','cervical-transcriptomics','xiamen-nev-market')
-for route in ('','about','research','gallery','notes',*(f'research/{slug}' for slug in research_routes)):
+project_routes=('planning-literature','border-dashboard')
+routes=('','about','research','projects','gallery','notes',*(f'research/{slug}' for slug in research_routes),*(f'projects/{slug}' for slug in project_routes))
+for route in routes:
     for lang in ('','zh'):
         if not (output/lang/route/'index.html').exists(): errors.append(f'Missing route: {lang}/{route}')
 en=json.loads((root/'i18n/en.json').read_text(encoding='utf-8'))
 zh=json.loads((root/'i18n/zh.json').read_text(encoding='utf-8'))
 if en.keys() != zh.keys(): errors.append('Translation keys differ')
+for slug in project_routes:
+    for lang in ('','zh'):
+        path=output/lang/'projects'/slug/'index.html'
+        if path.exists() and 'project-bars' not in path.read_text(encoding='utf-8'): errors.append(f'Project chart missing: {lang}/{slug}')
+for lang in ('en','zh'):
+    headings=re.findall(r'^## (.+)$',(root/'content'/lang/'about.md').read_text(encoding='utf-8'),re.M)
+    if len(headings)!=9: errors.append(f'{lang}/about: expected nine corresponding profile sections, got {len(headings)}')
 for path in (root/'layouts').rglob('*.html'):
     for key in re.findall(r'i18n\s+"([^"]+)"',path.read_text(encoding='utf-8')):
         if key not in en: errors.append(f'{path}: missing translation {key}')
@@ -97,6 +112,8 @@ for slug in research_routes:
         source=root/'content'/lang/'research'/f'{slug}.md'
         route=output/('' if lang=='en' else 'zh')/'research'/slug/'index.html'
         if not source.exists() or not route.exists(): errors.append(f'Missing research project: {lang}/{slug}')
+        elif ('方法与结论对应' if lang=='zh' else 'Methods linked to findings') not in source.read_text(encoding='utf-8'):
+            errors.append(f'{lang}/{slug}: method-to-finding mapping missing')
         elif not any(marker in route.read_text(encoding='utf-8') for marker in ('class="results-figure"','class=results-figure')):
             errors.append(f'{lang}/{slug} has no results chart')
         if route.exists() and '**' in ''.join(documents.get(route,Document(route.read_text(encoding='utf-8'))).prose_text):
@@ -110,4 +127,4 @@ if not (output/'.nojekyll').exists(): errors.append('.nojekyll missing')
 if errors:
     print('\n'.join(errors)); raise SystemExit(1)
 panel_views=sum(len(project['panels']) for project in json.loads((root/'data/research_charts.json').read_text(encoding='utf-8')).values())*2
-print(f'PASS: {len(documents)} HTML files; {count} local/link references; 22 content routes; reciprocal language switching; {len(en)} bilingual UI keys; {panel_views} bilingual chart panels; CV and .nojekyll.')
+print(f'PASS: {len(documents)} HTML files; {count} local/link references; {len(routes)*2} content routes; reciprocal language switching; {len(en)} bilingual UI keys; {panel_views} bilingual research chart panels; project charts and method-to-finding mappings; CV and .nojekyll.')

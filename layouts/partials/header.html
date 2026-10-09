@@ -3,8 +3,9 @@
     <a class="brand" href="{{ "" | relLangURL }}" aria-label="{{ i18n "homeLabel" }}"><span class="brand-mark" aria-hidden="true">LYC<span>.</span></span><span class="brand-name">Liu YuChen<span class="brand-sub">{{ i18n "personalSpace" }}</span></span></a>
     <nav id="main-nav" aria-label="{{ i18n "mainNav" }}">
       {{ $page := . }}{{ range site.Menus.main }}
-      {{ $active := or ($page.IsMenuCurrent "main" .) (and (ne $page.Section "") (eq $page.Section .Identifier)) }}
-      <a href="{{ .URL }}" {{ if $active }}class="current" aria-current="{{ if $page.IsMenuCurrent "main" . }}page{{ else }}true{{ end }}"{{ end }}>{{ i18n .Identifier }}</a>
+      {{ $url := printf "%s/" .Identifier | relLangURL }}
+      {{ $active := or (eq $page.RelPermalink $url) (and (ne $page.Section "") (eq $page.Section .Identifier)) }}
+      <a href="{{ $url }}" {{ if $active }}class="current" aria-current="{{ if eq $page.RelPermalink $url }}page{{ else }}true{{ end }}"{{ end }}>{{ i18n .Identifier }}</a>
       {{ end }}
       <a class="nav-contact" href="mailto:{{ site.Params.email }}">{{ i18n "connect" }} <span aria-hidden="true">↗</span></a>
     </nav>

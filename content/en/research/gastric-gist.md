@@ -28,6 +28,14 @@ The report lists three GEO microarray datasets. Its described differential-expre
 
 These are separate tumor cohorts, not patients with confirmed GC–GIST comorbidity. Shared expression signals therefore do not directly establish mechanisms of co-occurring disease.
 
+## Methods linked to findings
+
+| Data science method | Corresponding finding | Interpretation boundary |
+| --- | --- | --- |
+| limma differential expression + WGCNA | Selected GC and GIST modules share 581 genes. | Shared signals from separate cohorts, not comorbidity mechanisms. |
+| Random Forest + cross-validated LASSO | 581 → 58 → 14 candidate features. | Feature selection does not establish diagnostic validity. |
+| cis-eQTL instrument screening + MR | Four genes reach the final plot; none has a significant reported association. | Limited instrument coverage and power; no established causal marker. |
+
 ## Analytical methods {#research-methods}
 
 1. Use limma to compare cases with controls, selecting genes at FDR < 0.05 and |log₂ fold change| > 1; display patterns with volcano plots and expression heatmaps.

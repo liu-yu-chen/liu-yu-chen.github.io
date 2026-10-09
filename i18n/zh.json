@@ -42,7 +42,7 @@
     "other": "在其他地方找到我"
   },
   "footerLocation": {
-    "other": "来自江苏常州 · 现居珠海 / 澳门"
+    "other": "来自江苏常州 · 广州 / 珠海 / 澳门"
   },
   "builtWith": {
     "other": "基于 Hugo 与"
@@ -81,7 +81,7 @@
     "other": "在人、数据与<br>可能性之间。"
   },
   "aboutLead": {
-    "other": "拥有社会学背景的跨学科研究者，关注数据科学、公共卫生与计算建模。"
+    "other": "我的研究建立在数据科学、健康科学与社会科学三重背景之上。"
   },
   "aboutIntro": {
     "other": "通过观察性数据、网络分析与主体建模，探索复杂的健康和社会系统。目前在香港科技大学（广州）担任研究助理，就读于澳门大学数据科学（精准医学）专业，并将于 2027 年入读香港科技大学博士项目。"
@@ -90,16 +90,16 @@
     "other": "了解我的经历"
   },
   "publicHealth": {
-    "other": "公共卫生"
+    "other": "生物统计与公共健康"
   },
   "socialScience": {
     "other": "计算社会科学"
   },
   "abm": {
-    "other": "主体建模"
+    "other": "复杂网络"
   },
   "multiOmics": {
-    "other": "多组学"
+    "other": "大模型与自然语言处理应用"
   },
   "researchEyebrow": {
     "other": "02 / 研究分享"
@@ -111,10 +111,10 @@
     "other": "查看全部研究"
   },
   "researchFootnote": {
-    "other": "根据个人简历整理的研究与项目概览，进行中的工作已明确标注。"
+    "other": "依据原始材料，将数据科学方法、报告结论与解释边界对应呈现。"
   },
   "beyondEyebrow": {
-    "other": "03 / 研究之外"
+    "other": "04 / 研究之外"
   },
   "beyondHeading": {
     "other": "生活，不止<br>于研究。"
@@ -144,7 +144,7 @@
     "other": "为日常配上一段旋律"
   },
   "notesEyebrow": {
-    "other": "04 / 随心感想"
+    "other": "05 / 随心感想"
   },
   "notesHeading": {
     "other": "给思绪，一点空间。"
@@ -159,14 +159,20 @@
     "other": "你好，我是刘雨辰。"
   },
   "aboutPageDescription": {
-    "other": "从社会学到数据科学，始终对人与周围的系统保持好奇。"
+    "other": "将数据科学、健康科学与社会科学结合，开展跨学科研究。"
   },
   "degree": {
     "other": "数据科学（精准医学）"
   },
-  "currentRole": {"other":"研究助理"},
-  "currentInstitution": {"other":"香港科技大学（广州）"},
-  "incomingPhD": {"other":"香港科技大学 · 2027 级 Incoming PhD Student"},
+  "currentRole": {
+    "other": "研究助理"
+  },
+  "currentInstitution": {
+    "other": "香港科技大学（广州）"
+  },
+  "incomingPhD": {
+    "other": "香港科技大学 · 2027 级 Incoming PhD Student"
+  },
   "university": {
     "other": "澳门大学"
   },
@@ -180,7 +186,7 @@
     "other": "现居"
   },
   "locationName": {
-    "other": "珠海 / 澳门"
+    "other": "广州 / 珠海 / 澳门"
   },
   "outside": {
     "other": "研究之外"
@@ -207,12 +213,20 @@
     "other": "来源：个人简历。本页是项目摘要，不代表已经发表同行评议论文。"
   },
   "researchSource": {
-    "other": "本页根据个人简历整理。各详情页明确区分进行中的研究、已有分析与项目经历，不代表论文或代码已公开发布。"
+    "other": "以下内容依据研究稿件与课程报告整理。各页对应介绍数据、方法、结论和局限；网站没有重新计算原始数据。"
   },
-  "resultsEyebrow": {"other":"项目分析结果"},
-  "resultsHeading": {"other":"数据图表与分析结果"},
-  "absoluteThreshold": {"other":"绝对相关阈值"},
-  "projectSource": {"other":"项目摘要依据所提供的研究与课程材料整理。方法、样本数和局限均按各原始材料所报告的范围说明。"},
+  "resultsEyebrow": {
+    "other": "项目分析结果"
+  },
+  "resultsHeading": {
+    "other": "数据图表与分析结果"
+  },
+  "absoluteThreshold": {
+    "other": "绝对相关阈值"
+  },
+  "projectSource": {
+    "other": "项目摘要依据所提供的研究与课程材料整理。方法、样本数和局限均按各原始材料所报告的范围说明。"
+  },
   "galleryIntro": {
     "other": "足球、旅行、音乐，以及生活中的小小瞬间。"
   },
@@ -290,5 +304,23 @@
   },
   "pageLabel": {
     "other": "跳至第 %s 页介绍"
+  },
+  "projects": {
+    "other": "项目分享"
+  },
+  "projectsEyebrow": {
+    "other": "03 / 项目分享"
+  },
+  "projectsHeading": {
+    "other": "从研究方法，到实际工具。"
+  },
+  "allProjects": {
+    "other": "查看全部项目"
+  },
+  "backProjects": {
+    "other": "返回项目分享"
+  },
+  "projectPending": {
+    "other": "计划部署云端演示"
   }
 }

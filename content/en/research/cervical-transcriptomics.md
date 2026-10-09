@@ -1,7 +1,7 @@
 +++
 title = 'Cervical-cancer transcriptomics & survival analysis'
 description = 'An exploratory class project combining TCGA-CESC and GTEx expression data with survival-endpoint analysis.'
-category = 'BIOMEDICAL DATA SCIENCE · MULTI-OMICS'
+category = 'TRANSCRIPTOMICS · SURVIVAL ANALYSIS'
 status = 'Exploratory course project'
 period = 'Transcriptomic and clinical data analysis'
 visual = 'omics'
@@ -28,6 +28,14 @@ The expression matrix contains 309 TCGA-CESC tumor samples and 19 GTEx normal-ce
 | DSS status / DFI status | 308 / 178 | Endpoint-specific missingness |
 
 The report transposes matrices, standardizes identifiers, log₂(x+1)-transforms TCGA FPKM-UQ and GTEx TPM values, and retains genes above its expression threshold in at least 20% of samples. A shared log transform does not make the original units or batch effects equivalent; the report acknowledges that TCGA–GTEx batch correction was not performed.
+
+## Methods linked to findings
+
+| Data science method | Corresponding finding | Interpretation boundary |
+| --- | --- | --- |
+| Expression filtering + XGBoost ranking | 14,794 retained genes; top four features exceed 80% of reported relative importance. | TCGA/GTEx source differences and imbalance can affect ranking. |
+| Kaplan–Meier and multivariable Cox | Stage IVA HR 13.91; IVB HR 10.21; model concordance 0.641. | Wide intervals and an unspecified reference label limit interpretation. |
+| Endpoint-specific missingness audit | OS/PFI 312; DSS 308; DFI 178 records. | Different endpoints cannot be treated as one identical cohort. |
 
 ## Analytical methods {#research-methods}
 

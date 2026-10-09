@@ -2,6 +2,8 @@
 <section class="page-heading container"><p class="eyebrow">{{ .Params.eyebrow }}</p><h1>{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></section>
 {{ if eq .Section "research" }}
 <section class="container section-content"><div class="research-grid">{{ range .RegularPages.ByWeight }}{{ partial "research-card.html" . }}{{ end }}</div><div class="source-note">{{ i18n "researchSource" }}</div></section>
+{{ else if eq .Section "projects" }}
+<section class="container section-content"><div class="projects-grid">{{ range .RegularPages.ByWeight }}{{ partial "project-card.html" . }}{{ end }}</div><div class="source-note">{{ if eq site.Language.Lang "zh" }}项目页展示本地已有成果；云端演示将在实际部署完成后接入。{{ else }}Project pages present existing local results. Cloud demo links will be added after deployment.{{ end }}</div></section>
 {{ else if eq .Section "gallery" }}
 <section class="container section-content"><div class="gallery-intro"><p>{{ i18n "galleryIntro" }}</p><span class="small-label">{{ i18n "photoJournal" }}</span></div>
 {{ if .RegularPages }}<div class="gallery-grid">{{ range .RegularPages.ByDate.Reverse }}{{ $album := . }}<article class="gallery-card"><a href="{{ .RelPermalink }}">{{ with .Params.cover }}<img src="{{ . | relURL }}" alt="{{ $album.Title }}" loading="lazy">{{ end }}<h2>{{ .Title }}</h2><p>{{ .Description }}</p></a></article>{{ end }}</div>

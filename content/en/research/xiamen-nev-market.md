@@ -29,6 +29,14 @@ The report describes collecting vehicle-related Weibo texts and removing adverti
 
 The reliability table appears in the pilot-survey section and reports a 20-response, eight-item scale, Cronbach’s α = 0.895, and KMO = 0.715. These figures should not be described as reliability estimates from all 368 formal responses. The formal questionnaire yield is 91.32%.
 
+## Methods linked to findings
+
+| Data science method | Corresponding finding | Interpretation boundary |
+| --- | --- | --- |
+| Tokenization, sentiment analysis, and LDA | 8,058 texts; 50.0% positive; five interpreted topic groups. | Topic labels have no reported numeric prevalence. |
+| Random Forest feature importance | Occupation 0.297 and income 0.272 rank highest. | Model-specific importance, not causal effects. |
+| K-means consumer segmentation | Five reported profiles total 265, versus 290 in the methods. | The 25-case discrepancy must be audited. |
+
 ## Analytical methods {#research-methods}
 
 Chinese tokenization and word-frequency analysis summarize salient product terms. Sentiment scoring classifies online texts as positive, neutral, or negative. LDA identifies five interpretable topic groups; their keywords guide questionnaire design rather than measuring every resident’s priorities.

@@ -1,0 +1,15 @@
+{{ $lang := site.Language.Lang }}
+{{ $project := index site.Data.project_evidence .Page.Params.evidence }}
+<section class="project-evidence" aria-label="{{ if eq $lang "zh" }}已有项目结果{{ else }}Existing project results{{ end }}">
+{{ range $project.panels }}
+<figure class="project-result">
+<figcaption><h3>{{ index .title $lang }}</h3><p>{{ index .subtitle $lang }}</p></figcaption>
+<div class="project-bars" role="img" aria-label="{{ index .description $lang }}">
+{{ $max := .max }}{{ range .rows }}
+<div class="project-bar-row"><span>{{ index .label $lang }}</span><div class="project-bar-track"><div style="width:{{ mul (div (float .value) (float $max)) 100 }}%"></div></div><strong>{{ .display }}</strong></div>
+{{ end }}
+</div>
+<p class="project-result-note">{{ index .note $lang }}</p>
+</figure>
+{{ end }}
+</section>

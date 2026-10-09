@@ -28,6 +28,14 @@ The strict corpus contains 29,139 English research publications dated 1972–202
 
 Database counts overlap: 11,201 papers are indexed in two or more sources. Adding the three source counts therefore double-counts records. Primary-topic percentages use the 29,139-paper denominator. Multi-label subthemes instead use 65,733 assigned mentions, because a paper can receive two or three labels.
 
+## Methods linked to findings
+
+| Data science method | Corresponding finding | Interpretation boundary |
+| --- | --- | --- |
+| Taxonomy-guided LLM classification | 236 of 29,139 publications classified as using LLMs methodologically. | Labels depend on corpus coverage and classification validation. |
+| Annual shares and trend tests | LLM shares rise from 1.50% (2023) to 5.65% (2025); trend p < 0.001. | Describes adoption, not effects on research quality. |
+| Coauthorship networks and community detection | Reported communities increase from 8 to 52 across analyzed periods. | Network structure is sensitive to period and construction choices. |
+
 ## Analytical methods {#research-methods}
 
 The manuscript uses structured title-and-abstract classification through the DeepSeek API. Requests use temperature 0, JSON output, abstracts capped at 6,000 characters, and explicit topic, agent-type, LLM-use, and role taxonomies. Parsed fields are checked before merging into the corpus. This is taxonomy-guided classification, rather than an unsupervised LDA topic model.

@@ -1,0 +1,38 @@
+{
+  "planning-literature": {"panels": [{
+    "title": {"en": "Retrieval pilot: correct answers", "zh": "检索试验：判为正确的回答"},
+    "subtitle": {"en": "12 questions per condition · Qwen3-4B-Thinking-2507 · 8 Oct 2026", "zh": "每个条件 12 问 · Qwen3-4B-Thinking-2507 · 2026-10-08"},
+    "description": {"en": "Correct answers out of 12: closed book zero, database retrieval ten.", "zh": "12 问中判为正确：无检索 0 问，数据库检索辅助 10 问。"},
+    "max": 12,
+    "rows": [
+      {"label": {"en": "Closed book", "zh": "无检索"}, "value": 0, "display": "0 / 12"},
+      {"label": {"en": "Database RAG", "zh": "数据库 RAG"}, "value": 10, "display": "10 / 12"}
+    ],
+    "note": {"en": "Common scale: 0–12. Small local pilot, single model-based assessor, no expert validation. Source: saved pilot summary.", "zh": "统一尺度：0–12。小样本本地试验、单一模型评估者、未经专家验证。来源：保存的试验汇总。"}
+  }]},
+  "border-dashboard": {"panels": [{
+    "title": {"en": "Six ports: mean daily two-way crossings", "zh": "六口岸双向日均通关人次"},
+    "subtitle": {"en": "Complete calendar years · crossings/day", "zh": "完整年度 · 人次/日"},
+    "description": {"en": "2023: 358214, 2024: 526757, 2025: 600584 crossings per day.", "zh": "2023 年 358214、2024 年 526757、2025 年 600584 人次/日。"},
+    "max": 650000,
+    "rows": [
+      {"label": {"en": "2023", "zh": "2023 年"}, "value": 358214, "display": "358,214"},
+      {"label": {"en": "2024", "zh": "2024 年"}, "value": 526757, "display": "526,757"},
+      {"label": {"en": "2025", "zh": "2025 年"}, "value": 600584, "display": "600,584"}
+    ],
+    "note": {"en": "Common scale: 0–650,000 crossings/day. Reopening affects the 2023 baseline; partial 2026 is excluded. Source: local time-series report.", "zh": "统一尺度：0–650,000 人次/日。2023 年基准受复通影响；不纳入未完整的 2026 年。来源：本地时序报告。"}
+  }, {
+    "title": {"en": "Rolling one-step forecast backtest", "zh": "滚动一步预测回测"},
+    "subtitle": {"en": "Median MAE across 36 series · crossings/day · lower is better", "zh": "36 条序列的 MAE 中位数 · 人次/日 · 越低越好"},
+    "description": {"en": "Median MAE: LSTM 874.466; same weekday last week 1127.588; previous day 1278.392; 7-day mean 1492.848; 28-day mean 1673.653.", "zh": "MAE 中位数：LSTM 874.466；上周同日 1127.588；前一日 1278.392；7 日均值 1492.848；28 日均值 1673.653。"},
+    "max": 1800,
+    "rows": [
+      {"label": {"en": "LSTM", "zh": "LSTM"}, "value": 874.466, "display": "874.466"},
+      {"label": {"en": "Same weekday last week", "zh": "上周同日"}, "value": 1127.588, "display": "1,127.588"},
+      {"label": {"en": "Previous day", "zh": "前一日"}, "value": 1278.392, "display": "1,278.392"},
+      {"label": {"en": "Trailing 7-day mean", "zh": "过去 7 日均值"}, "value": 1492.848, "display": "1,492.848"},
+      {"label": {"en": "Trailing 28-day mean", "zh": "过去 28 日均值"}, "value": 1673.653, "display": "1,673.653"}
+    ],
+    "note": {"en": "Common scale: 0–1,800. Test: 10 Jun–7 Oct 2026. This does not validate recursive 30-day forecasts. Source: backtest_model_summary.csv.", "zh": "统一尺度：0–1,800。测试期：2026-06-10 至 10-07。不能据此验证 30 天递归预测。来源：backtest_model_summary.csv。"}
+  }]}
+}

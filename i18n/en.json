@@ -42,7 +42,7 @@
     "other": "Elsewhere on the internet"
   },
   "footerLocation": {
-    "other": "From Changzhou, Jiangsu · Based in Zhuhai / Macao"
+    "other": "From Changzhou, Jiangsu · Guangzhou / Zhuhai / Macao"
   },
   "builtWith": {
     "other": "Built with Hugo &"
@@ -81,7 +81,7 @@
     "other": "Between people,<br>data, and possibility."
   },
   "aboutLead": {
-    "other": "An interdisciplinary researcher with a background in sociology and a focus on data science, public health, and computational modeling."
+    "other": "My research draws equally on data science, health sciences, and social sciences."
   },
   "aboutIntro": {
     "other": "I study complex health and social systems through observational data, network analysis, and agent-based models. I'm currently a Research Assistant at HKUST (Guangzhou), studying Data Science (Precision Medicine) at the University of Macau, and an incoming PhD student at HKUST for the 2027 cohort."
@@ -90,16 +90,16 @@
     "other": "More about my journey"
   },
   "publicHealth": {
-    "other": "Public health"
+    "other": "Biostatistics & public health"
   },
   "socialScience": {
     "other": "Computational social science"
   },
   "abm": {
-    "other": "Agent-based modeling"
+    "other": "Complex networks"
   },
   "multiOmics": {
-    "other": "Multi-omics"
+    "other": "LLM & NLP applications"
   },
   "researchEyebrow": {
     "other": "02 / RESEARCH SHARING"
@@ -111,10 +111,10 @@
     "other": "All research"
   },
   "researchFootnote": {
-    "other": "Selected project summaries drawn from my CV. Ongoing work is labeled accordingly."
+    "other": "Source-based research summaries connecting data science methods with reported findings and their limits."
   },
   "beyondEyebrow": {
-    "other": "03 / BEYOND THE DESK"
+    "other": "04 / BEYOND THE DESK"
   },
   "beyondHeading": {
     "other": "A little more<br>than research."
@@ -144,7 +144,7 @@
     "other": "A soundtrack for everyday life"
   },
   "notesEyebrow": {
-    "other": "04 / PERSONAL NOTES"
+    "other": "05 / PERSONAL NOTES"
   },
   "notesHeading": {
     "other": "Room for a wandering mind."
@@ -159,14 +159,20 @@
     "other": "Hi, I'm Yuchen."
   },
   "aboutPageDescription": {
-    "other": "From sociology to data science. Always curious about people and the systems around them."
+    "other": "Data science, health sciences, and social sciences — connected through interdisciplinary research."
   },
   "degree": {
     "other": "Data Science (Precision Medicine)"
   },
-  "currentRole": {"other":"Research Assistant"},
-  "currentInstitution": {"other":"HKUST (Guangzhou)"},
-  "incomingPhD": {"other":"Incoming PhD Student · HKUST · 2027"},
+  "currentRole": {
+    "other": "Research Assistant"
+  },
+  "currentInstitution": {
+    "other": "HKUST (Guangzhou)"
+  },
+  "incomingPhD": {
+    "other": "Incoming PhD Student · HKUST · 2027"
+  },
   "university": {
     "other": "University of Macau"
   },
@@ -180,7 +186,7 @@
     "other": "Based in"
   },
   "locationName": {
-    "other": "Zhuhai / Macao"
+    "other": "Guangzhou / Zhuhai / Macao"
   },
   "outside": {
     "other": "Outside research"
@@ -207,12 +213,20 @@
     "other": "Source: personal CV."
   },
   "researchSource": {
-    "other": "These summaries are based on my CV. Research in progress, completed analyses, and project experience are identified on each page; no publication or code release is implied."
+    "other": "Research and course materials underpin these summaries. Each page connects data, methods, findings, and limitations; results are not newly computed from raw data here."
   },
-  "resultsEyebrow": {"other":"PROJECT RESULTS"},
-  "resultsHeading": {"other":"Data & results in figures."},
-  "absoluteThreshold": {"other":"Absolute r threshold"},
-  "projectSource": {"other":"Project summary based on the supplied research and course materials; methods, sample sizes, and limitations are described at the scope reported in each source."},
+  "resultsEyebrow": {
+    "other": "PROJECT RESULTS"
+  },
+  "resultsHeading": {
+    "other": "Data & results in figures."
+  },
+  "absoluteThreshold": {
+    "other": "Absolute r threshold"
+  },
+  "projectSource": {
+    "other": "Project summary based on the supplied research and course materials; methods, sample sizes, and limitations are described at the scope reported in each source."
+  },
   "galleryIntro": {
     "other": "Football, travel, music, and the moments in between."
   },
@@ -290,5 +304,23 @@
   },
   "pageLabel": {
     "other": "Go to introduction %s"
+  },
+  "projects": {
+    "other": "Projects"
+  },
+  "projectsEyebrow": {
+    "other": "03 / PROJECT SHARING"
+  },
+  "projectsHeading": {
+    "other": "Research methods, working tools."
+  },
+  "allProjects": {
+    "other": "All projects"
+  },
+  "backProjects": {
+    "other": "Back to projects"
+  },
+  "projectPending": {
+    "other": "Cloud demo planned"
   }
 }
